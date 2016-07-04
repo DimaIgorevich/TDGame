@@ -73,13 +73,17 @@ const CGFloat kTimeIncrementIntervalBeetwenWave = 6.0f;
             }             
         }
     }
-    
-//    if((numberLvl_ == kCountLevelWave -1) && [self areAllEnemiesDeadInArray]){
-//        NSLog(@"victory");
-//    }
+
+    if([self isVictoryLevel]){
+        [_delegate finishScreen];
+    }
 }
 
 #pragma mark - Methods Next Level Enemy Wave
+
+- (BOOL)isVictoryLevel{
+    return (numberLvl_ == kCountLevelWave -1) && [self areAllEnemiesDeadInArray] && ![self isEmptyArrayWithEnemies];
+}
 
 - (BOOL)isNextWaveNeeded{
     return (numberLvl_ < kCountLevelWave - 1)?YES:NO;

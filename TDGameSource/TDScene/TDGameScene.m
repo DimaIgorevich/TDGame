@@ -149,7 +149,7 @@ const NSInteger kStartCountLife = 20;
     _tileMap.anchorPoint = ccp(kHalfOfValue,kHalfOfValue);
 }
 
-- (void)stopTimer{
+- (void)stopRenderTimer{
     [_renderTimer invalidate];
     _renderTimer = nil;
 }
@@ -165,10 +165,10 @@ const NSInteger kStartCountLife = 20;
         if([_scoreManager valueHealth] > 0){
             [_scoreManager update];
         } else {
-            NSLog(@"GAME OVER!");
+            [self defeat];
         }
     } else {
-        [self stopTimer];
+        [self stopRenderTimer];
         [_enemyManager pause];
     }
 }
@@ -343,8 +343,44 @@ const NSInteger kStartCountLife = 20;
     [_statusBar setNumberWave:number ofWaves:countWaves];
 }
 
+- (void)finishScreen{
+    if([_scoreManager valueHealth] > 0){
+        [self victory];
+    }
+}
+
+- (void)defeat{
+    [self stopRenderTimer];
+    CCScene *defeatScene = [CCBReader loadAsScene:@"TDDefeatScene"];
+//    defeatScene.anchorPoint = ccp(-0.5f, -0.5f);
+    
+    if(defeatScene){
+        [self loadFinishScreenWithChild:defeatScene];
+    }
+}
+
 - (void)victory{
-    NSLog(@"class parent: %@", [self parent]);
+    [self stopRenderTimer];
+    CCScene *victoryScene = [CCBReader loadAsScene:@"TDVictoryScene"];
+    victoryScene.anchorPoint = ccp(-0.5f,-0.5f);
+    
+    if(victoryScene){
+        [self loadFinishScreenWithChild:victoryScene];
+    }
+}
+
+- (void)loadFinishScreenWithChild:(CCScene *)child{
+    CCNode *gameManagerScene = [self parent];
+    [gameManagerScene addChild:child];
+    
+    [NSTimer scheduledTimerWithTimeInterval:2.5f target:self selector:@selector(loadStartScene) userInfo:nil repeats:NO];
+}
+
+- (void)loadStartScene{
+    [self clearScene];
+    
+    CCScene *menuScene = [CCBReader loadAsScene:@"TDMainScene"];
+    [[CCDirector sharedDirector] replaceScene:menuScene];
 }
 
 @end

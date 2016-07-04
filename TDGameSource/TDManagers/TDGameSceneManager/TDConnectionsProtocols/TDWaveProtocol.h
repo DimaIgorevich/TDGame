@@ -12,6 +12,7 @@
 
 @required
 - (void)setNumberWave:(NSInteger)number ofWaves:(NSInteger)countWaves;
-- (void)victory;
+
+- (void)finishScreen;
 
 @end

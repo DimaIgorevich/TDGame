@@ -45,6 +45,11 @@
     [NSTimer scheduledTimerWithTimeInterval:[_builder run] target:self selector:@selector(towerIsReady) userInfo:nil repeats:NO];
 }
 
+- (void)upgradeTower{
+    upgradeLevel_++;
+    NSLog(@"upgrade tower");
+}
+
 - (NSInteger)valueCost{
     return cost_;
 }

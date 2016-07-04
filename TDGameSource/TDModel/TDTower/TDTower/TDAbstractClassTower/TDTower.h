@@ -19,6 +19,8 @@
     CGFloat speedBullet_;
     CGFloat coolDown_;
     NSInteger cost_;
+    TypeItem typeTower_;
+    NSInteger upgradeLevel_;
     
     //delegate:
     CCScene *delegate_;
@@ -26,7 +28,6 @@
     //skin tower
     CCSprite *towerSprite_;
     CCSprite *radiusSprite_;
-    //CCNodeColor *radiusSprite_;
     
     //build point:
     CGPoint position_;

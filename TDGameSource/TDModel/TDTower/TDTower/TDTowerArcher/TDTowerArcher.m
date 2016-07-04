@@ -14,6 +14,8 @@
     if(self = [super initWithPoint:buildPoint]){
         towerSprite_ = [CCSprite spriteWithImageNamed: @"td_tower_archers.png"];
         
+        upgradeLevel_ = 0;
+        typeTower_ = kArcherTower;
         damage_ = 45;
         cost_ = costTowerArcher;
         speedBullet_ = 40;

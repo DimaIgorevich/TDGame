@@ -14,6 +14,8 @@
     if(self = [super initWithPoint:buildPoint]){
         towerSprite_ = [CCSprite spriteWithImageNamed: @"td_tower_cannon.png"];
         
+        upgradeLevel_ = 0;
+        typeTower_ = kCannonTower;
         damage_ = 15;
         cost_ = costTowerCannon;
         speedBullet_ = 70;

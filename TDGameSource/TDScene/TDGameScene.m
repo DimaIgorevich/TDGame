@@ -133,8 +133,7 @@ const NSInteger kStartCountLife = 20;
     _enemyManager.timerManager = _timerManager;
     _enemyManager.delegate = self;
     
-    
-    
+
     _buildManager = [[TDBuildManager alloc] initWithDelegate:self];
     _towerManager = [[TDTowerManager alloc] init];
 }
@@ -182,22 +181,33 @@ const NSInteger kStartCountLife = 20;
 
     if(!_touchMove){
         _cellConstraction = [TDTouchManager constractionCellByPoint:touchLocation];
-        
-        if(_cellConstraction){
-            if(![_buildManager isShowBuildMenu]){
-                [_buildManager showBuildMenu:CGPointMake(_cellConstraction.x, _cellConstraction.y)];
-            } else {
-                _cellConstraction = [TDTouchManager constractionCellByPoint:[_buildManager menuPosition]];
-                [_buildManager hideBuildMenu];
-            }
+        if(_cellConstraction.tower){
+            [self updateMenuTower:_cellConstraction.tower];
         } else {
-            if([_buildManager isShowBuildMenu]){
-                _cellConstraction = [TDTouchManager constractionCellByPoint:[_buildManager menuPosition]];
-                [_buildManager hideBuildMenu];
-            }
+            [self createMenuTower];
         }
     } else {
         _touchMove = NO;
+    }
+}
+
+- (void)updateMenuTower:(TDTower *)tower{
+    NSLog(@"upgrade tower");
+}
+
+- (void)createMenuTower{
+    if(_cellConstraction){
+        if(![_buildManager isShowBuildMenu]){
+            [_buildManager showBuildMenu:CGPointMake(_cellConstraction.x, _cellConstraction.y)];
+        } else {
+            _cellConstraction = [TDTouchManager constractionCellByPoint:[_buildManager menuPosition]];
+            [_buildManager hideBuildMenu];
+        }
+    } else {
+        if([_buildManager isShowBuildMenu]){
+            _cellConstraction = [TDTouchManager constractionCellByPoint:[_buildManager menuPosition]];
+            [_buildManager hideBuildMenu];
+        }
     }
 }
 

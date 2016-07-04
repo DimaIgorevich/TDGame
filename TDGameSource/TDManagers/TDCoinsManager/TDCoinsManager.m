@@ -17,10 +17,6 @@
     return self;
 }
 
-- (NSInteger)coins{
-    return coins_;
-}
-
 - (void)buy:(NSInteger)cost{
     coins_ -= cost;
 }
@@ -31,6 +27,10 @@
 
 - (void)update{
     [_delegate updateCoins:coins_];
+}
+
+- (BOOL)canMakePurchaseBuild:(NSInteger)cost{
+    return coins_ >= cost;
 }
 
 @end

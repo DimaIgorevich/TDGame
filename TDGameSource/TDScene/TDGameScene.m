@@ -227,7 +227,7 @@ const NSInteger kStartCountLife = 20;
                 selectTower = [[TDTowerCannon alloc] initWithPoint:buildPoint];
             }
             
-            if([_coinsManager coins] >= [selectTower valueCost]){
+            if([_coinsManager canMakePurchaseBuild:[selectTower valueCost]]){
                 _cellConstraction.tower = selectTower;
                 _cellConstraction.tower.delegate = (CCScene *)[[TDContainer sharedContainer] mapLevel];
                 [_coinsManager buy:[selectTower valueCost]];

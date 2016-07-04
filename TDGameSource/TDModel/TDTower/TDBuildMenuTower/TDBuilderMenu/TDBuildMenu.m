@@ -7,8 +7,6 @@
 //
 
 #import "TDBuildMenu.h"
-#import "TDMapCell.h"
-
 #import "TDContainer.h"
 
 #define kBaseSkinBuildMenu @"td_build_menu_base.png"

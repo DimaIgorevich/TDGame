@@ -20,6 +20,7 @@
 - (void)buy:(NSInteger)cost;
 - (void)profit:(NSInteger)profit;
 - (void)update;
-- (NSInteger)coins;
+
+- (BOOL)canMakePurchaseBuild:(NSInteger)cost;
 
 @end

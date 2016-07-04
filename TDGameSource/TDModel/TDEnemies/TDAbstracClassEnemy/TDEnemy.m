@@ -7,7 +7,6 @@
 //
 
 #import "TDEnemy.h"
-#import "MapScheme.h"
 #import "TDProfitInfo.h"
 
 
@@ -233,13 +232,6 @@ const float kDefaultCoordinate = -100.0f;
 
 - (BOOL)isStayState{
     return movingDirection_ == kMovingNone;
-}
-
-- (CGPoint)indexPoint:(CGPoint)point{
-    NSInteger indexX = point.x/[TDMapCell sizeMapCell].height;
-    NSInteger indexY = point.y/[TDMapCell sizeMapCell].width;
-    
-    return CGPointMake(indexX, indexY);
 }
 
 - (void)checkTargetPoint{

@@ -62,9 +62,6 @@
 		84E2AB6E1D2870B900B9C504 /* TDLifeIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E2AAE01D2870B800B9C504 /* TDLifeIndicator.m */; };
 		84E2AB6F1D2870B900B9C504 /* TDMinotaur.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E2AAE31D2870B800B9C504 /* TDMinotaur.m */; };
 		84E2AB701D2870B900B9C504 /* TDSlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E2AAE61D2870B800B9C504 /* TDSlayer.m */; };
-		84E2AB711D2870B900B9C504 /* TDMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E2AAE91D2870B800B9C504 /* TDMap.m */; };
-		84E2AB721D2870B900B9C504 /* TDMapCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E2AAEB1D2870B800B9C504 /* TDMapCell.m */; };
-		84E2AB731D2870B900B9C504 /* MapScheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E2AAEE1D2870B800B9C504 /* MapScheme.m */; };
 		84E2AB741D2870B900B9C504 /* TDTiledMapCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E2AAF01D2870B800B9C504 /* TDTiledMapCell.m */; };
 		84E2AB751D2870B900B9C504 /* TDTiledObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E2AAF21D2870B800B9C504 /* TDTiledObject.m */; };
 		84E2AB761D2870B900B9C504 /* TDBuildMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E2AAF71D2870B800B9C504 /* TDBuildMenu.m */; };
@@ -289,12 +286,6 @@
 		84E2AAE31D2870B800B9C504 /* TDMinotaur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDMinotaur.m; sourceTree = "<group>"; };
 		84E2AAE51D2870B800B9C504 /* TDSlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDSlayer.h; sourceTree = "<group>"; };
 		84E2AAE61D2870B800B9C504 /* TDSlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDSlayer.m; sourceTree = "<group>"; };
-		84E2AAE81D2870B800B9C504 /* TDMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDMap.h; sourceTree = "<group>"; };
-		84E2AAE91D2870B800B9C504 /* TDMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDMap.m; sourceTree = "<group>"; };
-		84E2AAEA1D2870B800B9C504 /* TDMapCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDMapCell.h; sourceTree = "<group>"; };
-		84E2AAEB1D2870B800B9C504 /* TDMapCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDMapCell.m; sourceTree = "<group>"; };
-		84E2AAED1D2870B800B9C504 /* MapScheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapScheme.h; sourceTree = "<group>"; };
-		84E2AAEE1D2870B800B9C504 /* MapScheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapScheme.m; sourceTree = "<group>"; };
 		84E2AAEF1D2870B800B9C504 /* TDTiledMapCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDTiledMapCell.h; sourceTree = "<group>"; };
 		84E2AAF01D2870B800B9C504 /* TDTiledMapCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDTiledMapCell.m; sourceTree = "<group>"; };
 		84E2AAF11D2870B800B9C504 /* TDTiledObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDTiledObject.h; sourceTree = "<group>"; };
@@ -897,24 +888,10 @@
 		84E2AAE71D2870B800B9C504 /* TDMap */ = {
 			isa = PBXGroup;
 			children = (
-				84E2AAE81D2870B800B9C504 /* TDMap.h */,
-				84E2AAE91D2870B800B9C504 /* TDMap.m */,
-				84E2AAEA1D2870B800B9C504 /* TDMapCell.h */,
-				84E2AAEB1D2870B800B9C504 /* TDMapCell.m */,
-				84E2AAEC1D2870B800B9C504 /* TDMapScheme */,
 				84E2AAEF1D2870B800B9C504 /* TDTiledMapCell.h */,
 				84E2AAF01D2870B800B9C504 /* TDTiledMapCell.m */,
 			);
 			path = TDMap;
-			sourceTree = "<group>";
-		};
-		84E2AAEC1D2870B800B9C504 /* TDMapScheme */ = {
-			isa = PBXGroup;
-			children = (
-				84E2AAED1D2870B800B9C504 /* MapScheme.h */,
-				84E2AAEE1D2870B800B9C504 /* MapScheme.m */,
-			);
-			path = TDMapScheme;
 			sourceTree = "<group>";
 		};
 		84E2AAF31D2870B800B9C504 /* TDTower */ = {
@@ -1705,7 +1682,6 @@
 				84E2AB601D2870B900B9C504 /* CCActionShake.m in Sources */,
 				84E2AB771D2870B900B9C504 /* TDItemTower.m in Sources */,
 				84E2AB6F1D2870B900B9C504 /* TDMinotaur.m in Sources */,
-				84E2AB731D2870B900B9C504 /* MapScheme.m in Sources */,
 				84E2AB781D2870B900B9C504 /* TDBuildProcessIndicator.m in Sources */,
 				84E2AB791D2870B900B9C504 /* TDTowerBuilder.m in Sources */,
 				84E2AB7A1D2870B900B9C504 /* TDBullet.m in Sources */,
@@ -1729,11 +1705,9 @@
 				84E2AB6C1D2870B900B9C504 /* TDWaveTimerManager.m in Sources */,
 				4921CA661D2A774500FF723F /* TDPriceBoard.m in Sources */,
 				84E2AB741D2870B900B9C504 /* TDTiledMapCell.m in Sources */,
-				84E2AB711D2870B900B9C504 /* TDMap.m in Sources */,
 				84E2ABAF1D2870B900B9C504 /* TDStatusBar.m in Sources */,
 				84E2AB661D2870B900B9C504 /* TDCoinsManager.m in Sources */,
 				84E2AB681D2870B900B9C504 /* TDGameSceneManager.m in Sources */,
-				84E2AB721D2870B900B9C504 /* TDMapCell.m in Sources */,
 				5B121038197487F2004C1E1D /* AppDelegate.m in Sources */,
 				84E2ABA81D2870B900B9C504 /* MainScene.m in Sources */,
 				84E2ABA91D2870B900B9C504 /* TDCreditsScene.m in Sources */,

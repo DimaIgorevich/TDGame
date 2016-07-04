@@ -352,21 +352,15 @@ const NSInteger kStartCountLife = 20;
 - (void)defeat{
     [self stopRenderTimer];
     CCScene *defeatScene = [CCBReader loadAsScene:@"TDDefeatScene"];
-//    defeatScene.anchorPoint = ccp(-0.5f, -0.5f);
     
-    if(defeatScene){
-        [self loadFinishScreenWithChild:defeatScene];
-    }
+    [self loadFinishScreenWithChild:defeatScene];
 }
 
 - (void)victory{
     [self stopRenderTimer];
     CCScene *victoryScene = [CCBReader loadAsScene:@"TDVictoryScene"];
-    victoryScene.anchorPoint = ccp(-0.5f,-0.5f);
     
-    if(victoryScene){
-        [self loadFinishScreenWithChild:victoryScene];
-    }
+    [self loadFinishScreenWithChild:victoryScene];
 }
 
 - (void)loadFinishScreenWithChild:(CCScene *)child{

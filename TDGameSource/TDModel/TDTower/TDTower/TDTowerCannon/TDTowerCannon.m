@@ -8,8 +8,6 @@
 
 #import "TDTowerCannon.h"
 
-const NSInteger costTowerCannon = 75;
-
 @implementation TDTowerCannon
 
 - (id)initWithPoint:(CGPoint)buildPoint{

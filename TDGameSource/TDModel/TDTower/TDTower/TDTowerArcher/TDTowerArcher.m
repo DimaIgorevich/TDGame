@@ -8,8 +8,6 @@
 
 #import "TDTowerArcher.h"
 
-const NSInteger costTowerArcher = 125;
-
 @implementation TDTowerArcher
 
 - (id)initWithPoint:(CGPoint)buildPoint{

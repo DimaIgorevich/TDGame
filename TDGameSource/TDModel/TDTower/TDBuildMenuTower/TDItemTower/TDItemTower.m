@@ -7,7 +7,9 @@
 //
 
 #import "TDItemTower.h"
+#import "TDTowersCost.h"
 #import "CCSprite+SizeToFit.h"
+#import "TDPriceBoard.h"
 
 @implementation TDItemTower
 
@@ -38,16 +40,16 @@
 
 - (void)setSkin{
     if(_typeItemBuild == kArcherTower){
-        [self setSkinTower:@"td_tower_archers.png" background:kYellowSkinItem];
+        [self setSkinTower:@"td_tower_archers.png" background:kYellowSkinItem priceBuilding:costTowerArcher];
     } else if(_typeItemBuild == kCannonTower){
-        [self setSkinTower:@"td_tower_cannon.png" background:kLightBlueSkinItem];
+        [self setSkinTower:@"td_tower_cannon.png" background:kLightBlueSkinItem priceBuilding:costTowerCannon];
     } else if(_typeItemBuild == kClosedTower){
-        [self setSkinTower:nil background:kCloseSkinItem];
+        [self setSkinTower:nil background:kCloseSkinItem priceBuilding:costNull];
     }
 
 }
 
-- (void)setSkinTower:(NSString *)nameOfFileTower background:(NSString *)nameOfFileBackground{
+- (void)setSkinTower:(NSString *)nameOfFileTower background:(NSString *)nameOfFileBackground priceBuilding:(NSInteger)price{
     CCButton *pButton = [[CCButton alloc] init];
     CCSpriteFrame *spriteFrame = [[CCSpriteFrame alloc] initWithTextureFilename:nameOfFileBackground rectInPixels:CGRectMake(0, 0, 32, 32) rotated:NO offset:CGPointMake(0, 0) originalSize:CGSizeMake(32, 32)];
     [pButton setBackgroundSpriteFrame:spriteFrame forState:CCControlStateNormal];
@@ -63,6 +65,9 @@
     
     [pButton setTarget:self selector:@selector(touchInside)];
 
+    CCSprite *priceBoard = [[TDPriceBoard alloc] initWithPriceBuilding:price];
+    [self addChild:priceBoard];
+    
     [self addChild:pButton z:0];
     
     if(nameOfFileTower != nil){

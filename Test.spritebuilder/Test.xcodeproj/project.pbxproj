@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4921CA5D1D2A762300FF723F /* priceBoard.png in Resources */ = {isa = PBXBuildFile; fileRef = 4921CA5C1D2A762300FF723F /* priceBoard.png */; };
+		4921CA661D2A774500FF723F /* TDPriceBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4921CA651D2A774500FF723F /* TDPriceBoard.m */; };
 		5B12102A197484DD004C1E1D /* TestActivity.java in Sources */ = {isa = PBXBuildFile; fileRef = 5B12101B19748413004C1E1D /* TestActivity.java */; };
 		5B121030197484FA004C1E1D /* TestActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B12102F197484FA004C1E1D /* TestActivity.m */; };
 		5B121038197487F2004C1E1D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B737893E1807617C0076A88C /* AppDelegate.m */; };
@@ -214,6 +216,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4921CA5C1D2A762300FF723F /* priceBoard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = priceBoard.png; sourceTree = "<group>"; };
+		4921CA641D2A774500FF723F /* TDPriceBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDPriceBoard.h; sourceTree = "<group>"; };
+		4921CA651D2A774500FF723F /* TDPriceBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDPriceBoard.m; sourceTree = "<group>"; };
+		4921CA671D2A7EF900FF723F /* TDTowersCost.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TDTowersCost.h; sourceTree = "<group>"; };
 		5B12100919748273004C1E1D /* libEGL.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEGL.so; path = /usr/lib/armv7a/libEGL.so; sourceTree = SDKROOT; };
 		5B12100B19748281004C1E1D /* BridgeKitV3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BridgeKitV3.framework; path = System/Library/Frameworks/BridgeKitV3.framework; sourceTree = SDKROOT; };
 		5B12100F197483EE004C1E1D /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
@@ -477,6 +483,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4921CA631D2A76C500FF723F /* TDPriceBoard */ = {
+			isa = PBXGroup;
+			children = (
+				4921CA641D2A774500FF723F /* TDPriceBoard.h */,
+				4921CA651D2A774500FF723F /* TDPriceBoard.m */,
+			);
+			name = TDPriceBoard;
+			sourceTree = "<group>";
+		};
 		5B12100D197483EE004C1E1D /* res */ = {
 			isa = PBXGroup;
 			children = (
@@ -902,6 +917,7 @@
 		84E2AAF41D2870B800B9C504 /* TDBuildMenuTower */ = {
 			isa = PBXGroup;
 			children = (
+				4921CA631D2A76C500FF723F /* TDPriceBoard */,
 				84E2AAF51D2870B800B9C504 /* TDBuilderMenu */,
 				84E2AAF81D2870B800B9C504 /* TDBuildProtocol */,
 				84E2AAFA1D2870B800B9C504 /* TDItemTower */,
@@ -988,6 +1004,7 @@
 				84E2AB0B1D2870B800B9C504 /* TDAbstractClassTower */,
 				84E2AB0E1D2870B800B9C504 /* TDTowerArcher */,
 				84E2AB111D2870B800B9C504 /* TDTowerCannon */,
+				4921CA671D2A7EF900FF723F /* TDTowersCost.h */,
 			);
 			path = TDTower;
 			sourceTree = "<group>";
@@ -1022,6 +1039,7 @@
 		84E2AB141D2870B800B9C504 /* TDResources */ = {
 			isa = PBXGroup;
 			children = (
+				4921CA5C1D2A762300FF723F /* priceBoard.png */,
 				84E2AB151D2870B800B9C504 /* td_block_element.png */,
 				84E2AB161D2870B800B9C504 /* td_bullet.png */,
 				84E2AB171D2870B800B9C504 /* td_hammer_1.png */,
@@ -1532,6 +1550,7 @@
 				84E2ABA11D2870B900B9C504 /* td_level_1_map.tmx in Resources */,
 				B71F5919188484E7003F4D28 /* Settings.png in Resources */,
 				84E2AB891D2870B900B9C504 /* td_field_element_spritesheet.png in Resources */,
+				4921CA5D1D2A762300FF723F /* priceBoard.png in Resources */,
 				B7378978180762440076A88C /* Default@2x.png in Resources */,
 				84E2AB821D2870B900B9C504 /* explosion.plist in Resources */,
 				84E2AB7E1D2870B900B9C504 /* td_block_element.png in Resources */,
@@ -1694,6 +1713,7 @@
 				84E2ABAC1D2870B900B9C504 /* TDMenuScene.m in Sources */,
 				84E2AB651D2870B900B9C504 /* TDBuildManager.m in Sources */,
 				84E2AB6C1D2870B900B9C504 /* TDWaveTimerManager.m in Sources */,
+				4921CA661D2A774500FF723F /* TDPriceBoard.m in Sources */,
 				84E2AB741D2870B900B9C504 /* TDTiledMapCell.m in Sources */,
 				84E2AB711D2870B900B9C504 /* TDMap.m in Sources */,
 				84E2ABAF1D2870B900B9C504 /* TDStatusBar.m in Sources */,

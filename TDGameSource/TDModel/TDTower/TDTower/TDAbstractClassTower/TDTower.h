@@ -10,6 +10,7 @@
 #import "TDItemTower.h"
 #import "CCSprite+SizeToFit.h"
 #import "TDBulletCharacterStruct.h"
+#import "TDTowersCost.h"
 
 @interface TDTower : NSObject{
     //main characteristic:

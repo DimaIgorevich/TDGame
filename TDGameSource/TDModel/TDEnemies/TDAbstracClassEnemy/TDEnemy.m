@@ -8,6 +8,8 @@
 
 #import "TDEnemy.h"
 #import "MapScheme.h"
+#import "TDProfitInfo.h"
+
 
 #import "TDContainer.h"
 #import "TDDamageProtocol.h"
@@ -265,6 +267,11 @@ const float kDefaultCoordinate = -100.0f;
 }
 
 - (void)kill{
+    //NSLog(@"kill in position: %f - %f", [self position].x, [self position].y);
+    
+    TDProfitInfo *info = [[TDProfitInfo alloc] initWithProfit:reward_];
+    [info addAnimation:delegate_ byPosition:self.position];
+    
     [_manager reward:reward_];
     [self removeSelfFromDelegateScene];
 }
@@ -275,7 +282,7 @@ const float kDefaultCoordinate = -100.0f;
     hitPoints_ -= ((damage - armor_)>=0)?damage - armor_:0;
     [lifeIndicator_ correctiveLifeValue:hitPoints_];
     
-    NSLog(@"hitPoints: %d", (int)hitPoints_);
+    //NSLog(@"hitPoints: %d", (int)hitPoints_);
     if([self isLife]){
         if(hitPoints_ <= 0){
             [self kill];

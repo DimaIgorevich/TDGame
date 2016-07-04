@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4921CA5D1D2A762300FF723F /* priceBoard.png in Resources */ = {isa = PBXBuildFile; fileRef = 4921CA5C1D2A762300FF723F /* priceBoard.png */; };
 		4921CA661D2A774500FF723F /* TDPriceBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4921CA651D2A774500FF723F /* TDPriceBoard.m */; };
+		4921CA6B1D2AA60400FF723F /* TDProfitInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4921CA6A1D2AA60400FF723F /* TDProfitInfo.m */; };
 		5B12102A197484DD004C1E1D /* TestActivity.java in Sources */ = {isa = PBXBuildFile; fileRef = 5B12101B19748413004C1E1D /* TestActivity.java */; };
 		5B121030197484FA004C1E1D /* TestActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B12102F197484FA004C1E1D /* TestActivity.m */; };
 		5B121038197487F2004C1E1D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B737893E1807617C0076A88C /* AppDelegate.m */; };
@@ -220,6 +221,8 @@
 		4921CA641D2A774500FF723F /* TDPriceBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDPriceBoard.h; sourceTree = "<group>"; };
 		4921CA651D2A774500FF723F /* TDPriceBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDPriceBoard.m; sourceTree = "<group>"; };
 		4921CA671D2A7EF900FF723F /* TDTowersCost.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TDTowersCost.h; sourceTree = "<group>"; };
+		4921CA691D2AA60400FF723F /* TDProfitInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDProfitInfo.h; sourceTree = "<group>"; };
+		4921CA6A1D2AA60400FF723F /* TDProfitInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDProfitInfo.m; sourceTree = "<group>"; };
 		5B12100919748273004C1E1D /* libEGL.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEGL.so; path = /usr/lib/armv7a/libEGL.so; sourceTree = SDKROOT; };
 		5B12100B19748281004C1E1D /* BridgeKitV3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BridgeKitV3.framework; path = System/Library/Frameworks/BridgeKitV3.framework; sourceTree = SDKROOT; };
 		5B12100F197483EE004C1E1D /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
@@ -490,6 +493,15 @@
 				4921CA651D2A774500FF723F /* TDPriceBoard.m */,
 			);
 			name = TDPriceBoard;
+			sourceTree = "<group>";
+		};
+		4921CA681D2AA5E800FF723F /* TDProfitAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				4921CA691D2AA60400FF723F /* TDProfitInfo.h */,
+				4921CA6A1D2AA60400FF723F /* TDProfitInfo.m */,
+			);
+			name = TDProfitAnimation;
 			sourceTree = "<group>";
 		};
 		5B12100D197483EE004C1E1D /* res */ = {
@@ -837,6 +849,7 @@
 		84E2AADA1D2870B800B9C504 /* TDEnemies */ = {
 			isa = PBXGroup;
 			children = (
+				4921CA681D2AA5E800FF723F /* TDProfitAnimation */,
 				84E2AADB1D2870B800B9C504 /* TDAbstracClassEnemy */,
 				84E2AADE1D2870B800B9C504 /* TDLifeIndicator */,
 				84E2AAE11D2870B800B9C504 /* TDMinotaur */,
@@ -1684,6 +1697,7 @@
 			files = (
 				84E2AB631D2870B900B9C504 /* CCSprite+SizeToFit.m in Sources */,
 				84E2AB701D2870B900B9C504 /* TDSlayer.m in Sources */,
+				4921CA6B1D2AA60400FF723F /* TDProfitInfo.m in Sources */,
 				84E2ABAB1D2870B900B9C504 /* TDLoadScene.m in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
 				84E2AB751D2870B900B9C504 /* TDTiledObject.m in Sources */,

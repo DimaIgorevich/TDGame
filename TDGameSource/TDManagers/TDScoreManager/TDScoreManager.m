@@ -30,4 +30,8 @@
     return health_;
 }
 
+- (BOOL)isHealthOver{
+    return health_ <= 0;
+}
+
 @end

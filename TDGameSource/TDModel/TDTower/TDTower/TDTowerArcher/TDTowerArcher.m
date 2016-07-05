@@ -16,10 +16,10 @@
         
         upgradeLevel_ = 0;
         typeTower_ = kArcherTower;
-        damage_ = 45;
+        damage_ = 26;
         cost_ = costTowerArcher;
-        speedBullet_ = 40;
-        coolDown_ = 1.9f;
+        speedBullet_ = 60;
+        coolDown_ = 1.63f;
         radius_ = 35.0f;
     }
     return self;

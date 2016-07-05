@@ -132,7 +132,6 @@ const NSInteger kStartCountLife = 20;
     _enemyManager.scoreManager = _scoreManager;
     _enemyManager.timerManager = _timerManager;
     _enemyManager.delegate = self;
-    
 
     _buildManager = [[TDBuildManager alloc] initWithDelegate:self];
     _towerManager = [[TDTowerManager alloc] init];
@@ -161,7 +160,7 @@ const NSInteger kStartCountLife = 20;
         //status bar manaegers:
         [_coinsManager update];
         
-        if([_scoreManager valueHealth] > 0){
+        if(![_scoreManager isHealthOver]){
             [_scoreManager update];
         } else {
             [self defeat];
@@ -192,7 +191,7 @@ const NSInteger kStartCountLife = 20;
 }
 
 - (void)updateMenuTower:(TDTower *)tower{
-    NSLog(@"upgrade tower");
+    NSLog(@"call upgrade tower menu");
 }
 
 - (void)createMenuTower{
@@ -338,7 +337,7 @@ const NSInteger kStartCountLife = 20;
 - (void)setValueTimer:(TDTime)time{
     NSString *dateFormat;
     
-    if(time.seconds < 9){
+    if(time.seconds < 10){
         dateFormat = [NSString stringWithFormat:@"%d:0%d", time.minutes, time.seconds];
     } else {
         dateFormat = [NSString stringWithFormat:@"%d:%d", time.minutes, time.seconds];
@@ -354,7 +353,7 @@ const NSInteger kStartCountLife = 20;
 }
 
 - (void)finishScreen{
-    if([_scoreManager valueHealth] > 0){
+    if(![_scoreManager isHealthOver]){
         [self victory];
     }
 }

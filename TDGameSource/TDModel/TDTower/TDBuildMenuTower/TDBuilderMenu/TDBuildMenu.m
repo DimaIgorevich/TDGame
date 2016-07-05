@@ -52,7 +52,6 @@
 - (void)setPositionOnMenu{
     for(TDItemTower *objectTower in _itemBuildColletion){
         objectTower.position = [self rectPositionByIndex:[_itemBuildColletion indexOfObject:objectTower]];
-//        NSLog(@"object size: %f - %f", objectTower.boundingBox.size.width, objectTower.boundingBox.size.height);
     }
 }
 

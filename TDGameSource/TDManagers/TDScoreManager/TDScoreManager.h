@@ -22,4 +22,6 @@
 - (void)catchDamage:(NSInteger)damageValue;
 - (NSInteger)valueHealth;
 
+- (BOOL)isHealthOver;
+
 @end

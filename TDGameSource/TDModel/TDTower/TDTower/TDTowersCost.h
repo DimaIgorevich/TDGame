@@ -6,7 +6,7 @@
 //  Copyright © 2016 Apportable. All rights reserved.
 //
 
-#define costTowerArcher 125
+#define costTowerArcher 100
 #define costTowerCannon 75
 #define costNull 0
 

@@ -1,0 +1,111 @@
+{
+  "buildingObjects":[
+    {
+      "towerSprite" : "td_tower_archers.png",
+      "upgradeLevel" : "0",
+      "typeTower" : "kArcherTower",
+      "damage" : "26",
+      "cost" : "100",
+      "speedBullet" : "60",
+      "coolDown" : "1.63",
+      "radius" : "35.0"
+    },
+    {
+      "towerSprite" : "td_tower_cannon.png",
+      "upgradeLevel" : "0",
+      "typeTower" : "kCannonTower",
+      "damage" : "15",
+      "cost" : "75",
+      "speedBullet" : "70",
+      "coolDown" : "1.5",
+      "radius" : "35.0"
+    }
+  ],
+  
+  "upgradeObjects" : {
+    "kArcherTower" : [
+      {
+        "towerSprite" : "td_tower_archers.png",
+        "upgradeLevel" : "1",
+        "typeTower" : "kArcherTower",
+        "damage" : "36",
+        "cost" : "140",
+        "speedBullet" : "65",
+        "coolDown" : "1.6",
+        "radius" : "39.0"
+      },
+      {
+        "towerSprite" : "td_tower_archers.png",
+        "upgradeLevel" : "2",
+        "typeTower" : "kArcherTower",
+        "damage" : "40",
+        "cost" : "180",
+        "speedBullet" : "70",
+        "coolDown" : "1.55",
+        "radius" : "45.0"
+      },
+      {
+        "towerSprite" : "td_tower_archers.png",
+        "upgradeLevel" : "3",
+        "typeTower" : "kArcherTower",
+        "damage" : "48",
+        "cost" : "220",
+        "speedBullet" : "78",
+        "coolDown" : "1.52",
+        "radius" : "50.0"
+      },
+      {
+        "towerSprite" : "td_tower_archers.png",
+        "upgradeLevel" : "4",
+        "typeTower" : "kArcherTower",
+        "damage" : "58",
+        "cost" : "260",
+        "speedBullet" : "82",
+        "coolDown" : "1.52",
+        "radius" : "60.0"
+      }
+    ],
+    "kCannonTower" : [
+      {
+        "towerSprite" : "td_tower_cannon.png",
+        "upgradeLevel" : "1",
+        "typeTower" : "kCannonTower",
+        "damage" : "20",
+        "cost" : "110",
+        "speedBullet" : "75",
+        "coolDown" : "1.48",
+        "radius" : "40.0"
+      },
+      {
+        "towerSprite" : "td_tower_cannon.png",
+        "upgradeLevel" : "2",
+        "typeTower" : "kCannonTower",
+        "damage" : "25",
+        "cost" : "135",
+        "speedBullet" : "78",
+        "coolDown" : "1.45",
+        "radius" : "45.0"
+      },
+      {
+        "towerSprite" : "td_tower_cannon.png",
+        "upgradeLevel" : "3",
+        "typeTower" : "kCannonTower",
+        "damage" : "30",
+        "cost" : "175",
+        "speedBullet" : "80",
+        "coolDown" : "1.43",
+        "radius" : "55.0"
+      },
+      {
+        "towerSprite" : "td_tower_cannon.png",
+        "upgradeLevel" : "4",
+        "typeTower" : "kCannonTower",
+        "damage" : "38",
+        "cost" : "230",
+        "speedBullet" : "85",
+        "coolDown" : "1.4",
+        "radius" : "65.0"
+      }
+    ]
+  }
+}

@@ -43,25 +43,25 @@
 - (void)loadTargetCell{
     CCTiledMapObjectGroup *objectGroup = [[[TDContainer sharedContainer] mapLevel] objectGroupNamed:@"defend_point"];
     
-    [[TDContainer sharedContainer] setTargetCell:[[TDTiledObject arrayOfObjectsOfClass:[TDTiledMapCell class] fromJSON:[objectGroup objects]] firstObject]];
+    [[TDContainer sharedContainer] setTargetCell:[[TDObject arrayOfObjectsOfClass:[TDTiledMapCell class] fromJSON:[objectGroup objects]] firstObject]];
 }
 
 - (void)loadRespawnCell{
     CCTiledMapObjectGroup *objectGroup = [[[TDContainer sharedContainer] mapLevel] objectGroupNamed:@"start_point"];
     
-    [[TDContainer sharedContainer] setRespawnCell:[[TDTiledObject arrayOfObjectsOfClass:[TDTiledMapCell class] fromJSON:[objectGroup objects]] firstObject]];
+    [[TDContainer sharedContainer] setRespawnCell:[[TDObject arrayOfObjectsOfClass:[TDTiledMapCell class] fromJSON:[objectGroup objects]] firstObject]];
 }
 
 - (void)loadPath{
     CCTiledMapObjectGroup *objectGroup = [[[TDContainer sharedContainer] mapLevel] objectGroupNamed:@"path"];
     
-    [[TDContainer sharedContainer] setPathObjects:[TDTiledObject arrayOfObjectsOfClass:[TDTiledMapCell class] fromJSON:[objectGroup objects]]];
+    [[TDContainer sharedContainer] setPathObjects:[TDObject arrayOfObjectsOfClass:[TDTiledMapCell class] fromJSON:[objectGroup objects]]];
 }
 
 - (void)loadConstraction{
     CCTiledMapObjectGroup *objectGroup = [[[TDContainer sharedContainer] mapLevel] objectGroupNamed:@"construction_points"];
     
-    [[TDContainer sharedContainer] setConstractionObjects:[TDTiledObject arrayOfObjectsOfClass:[TDTiledMapCell class] fromJSON:[objectGroup objects]]];
+    [[TDContainer sharedContainer] setConstractionObjects:[TDObject arrayOfObjectsOfClass:[TDTiledMapCell class] fromJSON:[objectGroup objects]]];
 }
 
 - (void)performToNextScene{

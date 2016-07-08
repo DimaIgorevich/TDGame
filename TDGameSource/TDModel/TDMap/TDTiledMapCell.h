@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "TDTower.h"
-#import "TDTiledObject.h"
+#import "TDObject.h"
 
-@interface TDTiledMapCell : TDTiledObject
+@interface TDTiledMapCell : TDObject
 
 @property (nonatomic) CGFloat height;
 @property (nonatomic) CGFloat width;

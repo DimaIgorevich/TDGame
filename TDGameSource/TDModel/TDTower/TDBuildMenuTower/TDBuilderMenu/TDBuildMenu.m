@@ -11,11 +11,22 @@
 
 #define kBaseSkinBuildMenu @"td_build_menu_base.png"
 
-@implementation TDBuildMenu
+const CGPoint kUpLeftPosition = {-8.0f, 100.0f - 24.0f};
+const CGPoint kDownLeftPosition = {-8.0f, -8.0f};
+const CGPoint kUpRightPosition = {100.0f - 24.0f, 100.0f - 24.0f};
+const CGPoint kDownRightPosition = {100.0f - 24.0f, -8.0f};
+const CGPoint kDownMidPosition = {50.0f - 16.0f, -8.0f};
+const CGPoint kUpMidPosition = {50.0f - 16.0f, 100.f -24.0f};
+
+@implementation TDBuildMenu{
+    id<TDCloseProtocol> manager_;
+}
 
 - (id)initWithManager:(id<TDCloseProtocol>)manager{
     if(self = [super initWithImageNamed:kBaseSkinBuildMenu]){
         self.scale = 0.0f;
+        
+        manager_ = manager;
         
         _itemBuildColletion = [NSArray arrayWithObjects:[TDItemTower itemTowerWithType:kArcherTower delegate:manager], [TDItemTower itemTowerWithType:kCannonTower delegate:manager], [TDItemTower itemTowerWithType:kClosedTower delegate:manager], nil];
         
@@ -23,6 +34,27 @@
         [self addChilds];
     }
     return self;
+}
+
+- (id)initWithJSONObjects:(NSArray <TDTowerJSON *>*)jsonObjects manager:(id<TDCloseProtocol>)manager{
+    if(self = [super initWithImageNamed:kBaseSkinBuildMenu]){
+        self.scale = 0.0f;
+        manager_ = manager;
+        
+        _itemBuildColletion = [NSArray arrayWithArray:[self menuItems:jsonObjects]];
+        
+        [self setPositionOnMenu];
+        [self addChilds];
+    }
+    return self;
+}
+
+- (NSArray *)menuItems:(NSArray <TDTowerJSON *>*)jsonTowers{
+    NSMutableArray <TDItemTower *>*items = [[NSMutableArray alloc] init];
+    for(TDTowerJSON *jsonObject in jsonTowers){
+        [items addObject:[TDItemTower itemWithJSONTowerObject:jsonObject delegate:manager_]];
+    }
+    return items;
 }
 
 - (void)show{
@@ -57,12 +89,22 @@
 
 - (CGPoint)rectPositionByIndex:(NSInteger)index{
     CGPoint point;
-    if(index == 0){
-        point = CGPointMake(-8,-8);
-    } else if(index == 1){
-        point = CGPointMake(-8.0f, 100.0f - 24.0f);
-    } else if(index == 2){
-        point = CGPointMake(100.0f - 24.0f, 100.0f - 24.0f);
+    if(_itemBuildColletion.count > 2){
+        if(index == 0){
+            point = kUpLeftPosition;
+        } else if(index == 1){
+            point = kUpRightPosition;
+        } else if(index == 2){
+            point = kDownLeftPosition;
+        } else if(index == 3){
+            point = kDownRightPosition;
+        }
+    } else {
+        if(index == 0){
+            point = kUpMidPosition;
+        } else if(index == 1){
+            point = kDownMidPosition;
+        }
     }
     return point;
 }

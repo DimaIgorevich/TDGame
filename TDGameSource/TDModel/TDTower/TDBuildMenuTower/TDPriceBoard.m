@@ -15,7 +15,10 @@ const CGFloat fontSize = 56.0f;
 - (id)initWithPriceBuilding:(NSInteger)price{
     if(self = [super initWithImageNamed:@"priceBoard.png"]){
         self.scale = 2;
-        self.anchorPoint = ccp(0.0f, 0.78f);
+        self.anchorPoint = ccp(0.5f, 0.5f);
+        
+        self.positionType = CCPositionTypeNormalized;
+        self.position = ccp(0.5f, -0.35f);
         
         priceBuilding_ = price;
         [self setPriceLabel];
@@ -25,7 +28,7 @@ const CGFloat fontSize = 56.0f;
 }
 
 - (void)setPriceLabel{
-    NSString *stringPrice = [NSString stringWithFormat:@"%d", priceBuilding_];
+    NSString *stringPrice = [NSString stringWithFormat:@"%d", (int)priceBuilding_];
     NSString *fontName = @"Futura-CondensedExtraBold";
     
     priceLabel_ = [CCLabelTTF labelWithString:stringPrice fontName:fontName fontSize:fontSize];

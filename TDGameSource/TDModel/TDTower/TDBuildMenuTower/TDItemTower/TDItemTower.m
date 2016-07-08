@@ -7,9 +7,10 @@
 //
 
 #import "TDItemTower.h"
-#import "TDTowersCost.h"
 #import "CCSprite+SizeToFit.h"
 #import "TDPriceBoard.h"
+
+//#import "TDTowersCost.h"
 
 @implementation TDItemTower
 
@@ -25,11 +26,24 @@
     if(self = [super init]){
         delegate_ = delegate;
         _typeItemBuild = item;
-        [self sizeToFit];
         
+        [self sizeToFit];
         [self setSkin];
     }
     
+    return self;
+}
+
+- (id)initWithJSONObject:(TDTowerJSON *)jsonTower delegate:(id<TDCloseProtocol>)delegate{
+    if(self = [super init]){
+        delegate_ = delegate;
+        _typeItemBuild = jsonTower.typeTower;
+        
+        
+        [self sizeToFit];
+        [self setSkinObject:jsonTower];
+        
+    }
     return self;
 }
 
@@ -38,14 +52,24 @@
     return itemTower;
 }
 
++ (TDItemTower *)itemWithJSONTowerObject:(TDTowerJSON *)jsonObject delegate:(id<TDCloseProtocol>)delegate{
+    TDItemTower *itemTower = [[TDItemTower alloc] initWithJSONObject:jsonObject delegate:delegate];
+    return itemTower;
+}
+
+- (void)setSkinObject:(TDTowerJSON *)object{
+    self.tower = object;
+    [self setSkinTower:object.fileNameTowerSprite background:kLightBlueSkinItem priceBuilding:object.cost];
+}
+
 - (void)setSkin{
-    if(_typeItemBuild == kArcherTower){
-        [self setSkinTower:@"td_tower_archers.png" background:kYellowSkinItem priceBuilding:costTowerArcher];
-    } else if(_typeItemBuild == kCannonTower){
-        [self setSkinTower:@"td_tower_cannon.png" background:kLightBlueSkinItem priceBuilding:costTowerCannon];
-    } else if(_typeItemBuild == kClosedTower){
-        [self setSkinTower:nil background:kCloseSkinItem priceBuilding:costNull];
-    }
+//    if(_typeItemBuild == kArcherTower){
+//        [self setSkinTower:@"td_tower_archers.png" background:kYellowSkinItem priceBuilding:costTowerArcher];
+//    } else if(_typeItemBuild == kCannonTower){
+//        [self setSkinTower:@"td_tower_cannon.png" background:kLightBlueSkinItem priceBuilding:costTowerCannon];
+//    } else if(_typeItemBuild == kClosedTower){
+//        [self setSkinTower:nil background:kCloseSkinItem priceBuilding:costNull];
+//    }
 
 }
 

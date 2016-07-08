@@ -6,9 +6,9 @@
 //  Copyright © 2016 Apportable. All rights reserved.
 //
 
-#import "TDTiledObject.h"
+#import "TDObject.h"
 
-@implementation TDTiledObject
+@implementation TDObject
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary{
     self = [super init];
@@ -27,11 +27,11 @@
 
 + (NSArray *)arrayOfObjectsOfClass:(Class)obj_class
                           fromJSON:(id)json
-                 postItrationBlock:(void (^) (TDTiledObject *obj))block{
+                 postItrationBlock:(void (^) (TDObject *obj))block{
     NSMutableArray *resultValue = [NSMutableArray array];
         
     for(NSDictionary *info in json){
-        TDTiledObject *obj = [[obj_class alloc] initWithDictionary:info];
+        TDObject *obj = [[obj_class alloc] initWithDictionary:info];
         
         [resultValue addObject:obj];
         if(block){

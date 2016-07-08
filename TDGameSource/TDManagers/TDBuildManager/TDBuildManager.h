@@ -10,6 +10,7 @@
 #import "TDBuildMenu.h"
 #import "TDBuildProtocol.h"
 #import "TDCloseProtocol.h"
+#import "TDTower.h"
 
 @interface TDBuildManager : NSObject <TDCloseProtocol>{
     id<TDBuildProtocol> delegate_;
@@ -20,10 +21,13 @@
 - (id)initWithDelegate:(id)delegate;
 
 - (void)showBuildMenu:(CGPoint)showPoint;
+- (void)showBuildMenuForTower:(TDTower *)tower inShowPoint:(CGPoint)showPoint;
+
 - (void)hideBuildMenu;
 
 - (BOOL)isShowBuildMenu;
 - (CGPoint)menuPosition;
+- (TDTowerJSON *)dataByTower:(TDTower *)objectTower;
 
 @end
 

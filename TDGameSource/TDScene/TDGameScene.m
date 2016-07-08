@@ -180,34 +180,30 @@ const NSInteger kStartCountLife = 20;
 
     if(!_touchMove){
         _cellConstraction = [TDTouchManager constractionCellByPoint:touchLocation];
-        if(_cellConstraction.tower){
-            [self updateMenuTower:_cellConstraction.tower];
+        
+        if(_cellConstraction){
+            if(![_buildManager isShowBuildMenu]){
+                if(!_cellConstraction.tower){
+                    [_buildManager showBuildMenu:CGPointMake(_cellConstraction.x, _cellConstraction.y)];
+                } else {
+                    [_buildManager showBuildMenuForTower:_cellConstraction.tower inShowPoint:CGPointMake(_cellConstraction.x, _cellConstraction.y)];
+                }
+            } else {
+                [self hideBuildMenu];
+            }
         } else {
-            [self createMenuTower];
+            if([_buildManager isShowBuildMenu]){
+                [self hideBuildMenu];
+            }
         }
     } else {
         _touchMove = NO;
     }
 }
 
-- (void)updateMenuTower:(TDTower *)tower{
-    NSLog(@"call upgrade tower menu");
-}
-
-- (void)createMenuTower{
-    if(_cellConstraction){
-        if(![_buildManager isShowBuildMenu]){
-            [_buildManager showBuildMenu:CGPointMake(_cellConstraction.x, _cellConstraction.y)];
-        } else {
-            _cellConstraction = [TDTouchManager constractionCellByPoint:[_buildManager menuPosition]];
-            [_buildManager hideBuildMenu];
-        }
-    } else {
-        if([_buildManager isShowBuildMenu]){
-            _cellConstraction = [TDTouchManager constractionCellByPoint:[_buildManager menuPosition]];
-            [_buildManager hideBuildMenu];
-        }
-    }
+- (void)hideBuildMenu{
+    _cellConstraction = [TDTouchManager constractionCellByPoint:[_buildManager menuPosition]];
+    [_buildManager hideBuildMenu];
 }
 
 #pragma mark - TDBuildProtocol methods
@@ -216,28 +212,54 @@ const NSInteger kStartCountLife = 20;
     if(typeTower.typeItemBuild != kClosedTower){
         dispatch_async(dispatch_get_main_queue(), ^{
             CGPoint buildPoint = CGPointMake(_cellConstraction.x, _cellConstraction.y);
-            //NSLog(@"build point %f - %f", buildPoint.x, buildPoint.y);
-            
-            TDTower *selectTower;
-            if(typeTower.typeItemBuild == kArcherTower){
-                selectTower = [[TDTowerArcher alloc] initWithPoint:buildPoint];
-            }
-            if(typeTower.typeItemBuild == kCannonTower){
-                selectTower = [[TDTowerCannon alloc] initWithPoint:buildPoint];
-            }
-            
+            TDTower *selectTower = [[TDTower alloc] initWithJSONObject:typeTower.tower inPoint:buildPoint];
             if([_coinsManager canMakePurchaseBuild:[selectTower valueCost]]){
-                _cellConstraction.tower = selectTower;
-                _cellConstraction.tower.delegate = (CCScene *)[[TDContainer sharedContainer] mapLevel];
-                [_coinsManager buy:[selectTower valueCost]];
-                [_cellConstraction.tower buildTower];
+                if(_cellConstraction.tower){
+                    
+                    [_coinsManager buy:[selectTower valueCost]];
+                    [_cellConstraction.tower upgradeTower:typeTower.tower];
+                    //TO DO add animation upgrade
+                    
+                    
+                } else {
+                    _cellConstraction.tower = selectTower;
+                    _cellConstraction.tower.delegate = (CCScene *)[[TDContainer sharedContainer] mapLevel];
                 
-                [_towerManager addTower:_cellConstraction.tower];
+                    [_coinsManager buy:[selectTower valueCost]];
+                    [_cellConstraction.tower buildTower];
+                
+                    [_towerManager addTower:_cellConstraction.tower];
+                }
             } else {
                 [_statusBar animationNoMoney];
             }
         });
     }
+//    if(typeTower.typeItemBuild != kClosedTower){
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            CGPoint buildPoint = CGPointMake(_cellConstraction.x, _cellConstraction.y);
+//            //NSLog(@"build point %f - %f", buildPoint.x, buildPoint.y);
+//            
+//            TDTower *selectTower;
+//            if(typeTower.typeItemBuild == kArcherTower){
+//                selectTower = [[TDTowerArcher alloc] initWithPoint:buildPoint];
+//            }
+//            if(typeTower.typeItemBuild == kCannonTower){
+//                selectTower = [[TDTowerCannon alloc] initWithPoint:buildPoint];
+//            }
+//            
+//            if([_coinsManager canMakePurchaseBuild:[selectTower valueCost]]){
+//                _cellConstraction.tower = selectTower;
+//                _cellConstraction.tower.delegate = (CCScene *)[[TDContainer sharedContainer] mapLevel];
+//                [_coinsManager buy:[selectTower valueCost]];
+//                [_cellConstraction.tower buildTower];
+//                
+//                [_towerManager addTower:_cellConstraction.tower];
+//            } else {
+//                [_statusBar animationNoMoney];
+//            }
+//        });
+//    }
 }
 
 - (void)correctivePosition:(CGPoint)position{    

@@ -12,6 +12,8 @@
 #import "TDBulletCharacterStruct.h"
 #import "TDTowersCost.h"
 
+#import "TDTowerJSON.h"
+
 @interface TDTower : NSObject{
     //main characteristic:
     CGFloat radius_;
@@ -41,10 +43,15 @@
 @property (nonatomic) CGPoint position;
 
 - (id)initWithPoint:(CGPoint)buildPoint;
+- (id)initWithJSONObject:(TDTowerJSON *)tower inPoint:(CGPoint)buildPoint;
 
 - (void)buildTower;
 
 - (NSInteger)valueCost;
+- (TypeItem)typeTower;
+- (NSInteger)upgradeLevel;
+
+- (void)upgradeTower:(TDTowerJSON *)tower;
 
 - (TDBulletCharacter)fire;
 

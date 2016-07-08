@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface TDTiledObject : NSObject
+@interface TDObject : NSObject
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
@@ -16,6 +16,6 @@
                           fromJSON:(id)json;
 + (NSArray *)arrayOfObjectsOfClass:(Class)obj_class
                           fromJSON:(id)json
-                 postItrationBlock:(void (^) (TDTiledObject *obj))block;
+                 postItrationBlock:(void (^) (TDObject *obj))block;
 
 @end

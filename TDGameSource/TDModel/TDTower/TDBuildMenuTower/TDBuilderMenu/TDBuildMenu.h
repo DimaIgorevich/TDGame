@@ -18,6 +18,8 @@
 
 - (id)initWithManager:(id<TDCloseProtocol>)manager;
 
+- (id)initWithJSONObjects:(NSArray <TDTowerJSON *>*)jsonObjects manager:(id<TDCloseProtocol>)manager;
+
 - (void)show;
 - (void)hide;
 

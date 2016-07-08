@@ -39,19 +39,61 @@
     return self;
 }
 
+- (id)initWithJSONObject:(TDTowerJSON *)tower inPoint:(CGPoint)buildPoint{
+    if(self = [super init]){
+        position_ = buildPoint;
+        
+        towerSprite_ = [CCSprite spriteWithImageNamed: tower.fileNameTowerSprite];
+        
+        upgradeLevel_ = 1;
+        typeTower_ = tower.typeTower;
+        damage_ = tower.damage;
+        cost_ = tower.cost;
+        speedBullet_ = tower.speedBullet;
+        coolDown_ = tower.coolDown;
+        radius_ = tower.radius;
+        
+        _builder = [[TDTowerBuilder alloc] init];
+        _builder.buildPosition = position_;
+        _isReadyToFire = YES;
+    }
+    return self;
+}
+
 - (void)buildTower{
     _builder.delegate = delegate_;
     
     [NSTimer scheduledTimerWithTimeInterval:[_builder run] target:self selector:@selector(towerIsReady) userInfo:nil repeats:NO];
 }
 
-- (void)upgradeTower{
-    upgradeLevel_++;
-    NSLog(@"upgrade tower");
-}
-
 - (NSInteger)valueCost{
     return cost_;
+}
+
+- (TypeItem)typeTower{
+    return typeTower_;
+}
+
+- (NSInteger)upgradeLevel{
+    return upgradeLevel_;
+}
+
+- (void)upgradeTower:(TDTowerJSON *)tower{
+    typeTower_ = tower.typeTower;
+    damage_ = tower.damage;
+    cost_ = tower.cost;
+    speedBullet_ = tower.speedBullet;
+    coolDown_ = tower.coolDown;
+    
+    radius_ = tower.radius;
+    [self setSizeRadius];
+    
+    upgradeLevel_++;
+}
+
+- (void)setSizeRadius{
+    radiusSprite_.scaleX = (radiusSprite_.contentSize.width + radius_)/radiusSprite_.contentSize.width;
+    radiusSprite_.scaleY = (radiusSprite_.contentSize.height + radius_)/radiusSprite_.contentSize.height;
 }
 
 - (void)towerIsReady{
@@ -62,8 +104,7 @@
     [radiusSprite_ sizeToCustomFit:[[TDContainer sharedContainer] mapLevel].tileSize];
     [towerSprite_ sizeToCustomFit:[[TDContainer sharedContainer] mapLevel].tileSize];
     
-    radiusSprite_.scaleX = (radiusSprite_.contentSize.width + radius_)/radiusSprite_.contentSize.width;
-    radiusSprite_.scaleY = (radiusSprite_.contentSize.height + radius_)/radiusSprite_.contentSize.height;
+    [self setSizeRadius];
     
     CGPoint center = position_;
     
@@ -80,7 +121,7 @@
     radiusSprite_.anchorPoint = CGPointZero;
     
     [radiusSprite_ setOpacity:0.0f];
-    //[radiusSprite_ setOpacity: 0.75f];
+    //[radiusSprite_ setOpacity: 0.85f];
 
     
     towerSprite_.anchorPoint = CGPointZero;

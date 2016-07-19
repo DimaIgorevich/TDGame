@@ -19,8 +19,11 @@
 @property (nonatomic) CCLabelTTF *health;
 @property (nonatomic) CCLabelTTF *timer;
 @property (nonatomic) CCLabelTTF *waves;
+@property (nonatomic) CCLabelTTF *energy;
 
 - (void)animationNoMoney;
+- (void)animationNoEnegry;
+
 - (void)setNumberWave:(NSInteger)numberWave ofWaves:(NSInteger)countWaves;
 
 @end

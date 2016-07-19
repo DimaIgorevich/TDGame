@@ -16,12 +16,14 @@
     CCLabelTTF *health_;
     CCLabelTTF *timer_;
     CCLabelTTF *waves_;
+    CCLabelTTF *energy_;
 }
 
 @synthesize coins = coins_;
 @synthesize health = health_;
 @synthesize timer = timer_;
 @synthesize waves = waves_;
+@synthesize energy = energy_;
 
 - (id)init{
     if(self = [super init]){
@@ -49,6 +51,10 @@
 - (void)hide{
     _isShow = NO;
     [self removeFromParent];
+}
+
+- (void)animationNoEnegry{
+    [energy_ runAction:[CCActionShake actionWithDuration:0.5f amplitude:CGPointMake(0.01f, 0.0f) dampening:YES]];
 }
 
 - (void)animationNoMoney{

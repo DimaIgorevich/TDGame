@@ -16,6 +16,7 @@
         _upgradeLevel = [[dictionary objectForKey:@"upgradeLevel"] integerValue];
         _typeTower = [TDTypeItem stringValueToType:[dictionary objectForKey:@"typeTower"]];
         _damage = [[dictionary objectForKey:@"damage"] integerValue];
+        _power = [[dictionary objectForKey:@"power"] integerValue];
         _cost = [[dictionary objectForKey:@"cost"] integerValue];
         _speedBullet = [[dictionary objectForKey:@"speedBullet"] integerValue];
         _coolDown = [[dictionary objectForKey:@"coolDown"] floatValue];

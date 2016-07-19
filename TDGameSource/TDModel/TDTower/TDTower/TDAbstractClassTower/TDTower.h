@@ -21,6 +21,7 @@
     CGFloat speedBullet_;
     CGFloat coolDown_;
     NSInteger cost_;
+    NSInteger power_;
     TypeItem typeTower_;
     NSInteger upgradeLevel_;
     
@@ -48,6 +49,7 @@
 - (void)buildTower;
 
 - (NSInteger)valueCost;
+- (NSInteger)valuePower;
 - (TypeItem)typeTower;
 - (NSInteger)upgradeLevel;
 

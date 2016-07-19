@@ -49,6 +49,7 @@
         typeTower_ = tower.typeTower;
         damage_ = tower.damage;
         cost_ = tower.cost;
+        power_ = tower.power;
         speedBullet_ = tower.speedBullet;
         coolDown_ = tower.coolDown;
         radius_ = tower.radius;
@@ -68,6 +69,10 @@
 
 - (NSInteger)valueCost{
     return cost_;
+}
+
+- (NSInteger)valuePower{
+    return power_;
 }
 
 - (TypeItem)typeTower{

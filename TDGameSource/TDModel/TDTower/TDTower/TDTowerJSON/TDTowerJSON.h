@@ -16,6 +16,7 @@
 @property (nonatomic) TypeItem typeTower;
 @property (nonatomic) NSInteger damage;
 @property (nonatomic) NSInteger cost;
+@property (nonatomic) NSInteger power;
 @property (nonatomic) NSInteger speedBullet;
 @property (nonatomic) CGFloat coolDown;
 @property (nonatomic) CGFloat radius;

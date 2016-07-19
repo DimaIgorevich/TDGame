@@ -12,5 +12,6 @@
 
 @required
 - (void)updateCoins:(NSInteger)newCoins;
+- (void)updatePowerEnergy:(NSInteger)energy;
 
 @end

@@ -39,6 +39,7 @@ const CGFloat kHalfOfValue = 0.5f;
 const CGFloat kThreeQuarterOfValue = 0.75f;
 
 const NSInteger kStartCountCoins = 480;
+const NSInteger kStartCountEnergy = 10;
 const NSInteger kStartCountLife = 20;
 
 @interface TDGameScene() <TDBuildProtocol, TDPauseProtocol, TDCoinsProtocol, TDScoreProtocol, TDWaveTimerProtocol, TDWaveProtocol>
@@ -118,7 +119,7 @@ const NSInteger kStartCountLife = 20;
 }
 
 - (void)initManagers{
-    _coinsManager = [[TDCoinsManager alloc] initWithCoins:kStartCountCoins];
+    _coinsManager = [[TDCoinsManager alloc] initWithCoins:kStartCountCoins energy:kStartCountEnergy];
     _coinsManager.delegate = self;
     
     _scoreManager = [[TDScoreManager alloc] initWithHealth:kStartCountLife];
@@ -213,11 +214,19 @@ const NSInteger kStartCountLife = 20;
         dispatch_async(dispatch_get_main_queue(), ^{
             CGPoint buildPoint = CGPointMake(_cellConstraction.x, _cellConstraction.y);
             TDTower *selectTower = [[TDTower alloc] initWithJSONObject:typeTower.tower inPoint:buildPoint];
-            if([_coinsManager canMakePurchaseBuild:[selectTower valueCost]]){
+            NSInteger needPower;
+            if(_cellConstraction.tower){
+                needPower = [_cellConstraction.tower valuePower] - [selectTower valuePower];
+            } else {
+                needPower = [selectTower valuePower];
+            }
+            
+            if([_coinsManager canMakePurchaseBuild:[selectTower valueCost] electricPower:needPower]){
                 if(_cellConstraction.tower){
                     
-                    [_coinsManager buy:[selectTower valueCost]];
+                    [_coinsManager buy:[selectTower valueCost] energy:needPower];
                     [_cellConstraction.tower upgradeTower:typeTower.tower];
+                    
                     //TO DO add animation upgrade
                     
                     
@@ -225,13 +234,20 @@ const NSInteger kStartCountLife = 20;
                     _cellConstraction.tower = selectTower;
                     _cellConstraction.tower.delegate = (CCScene *)[[TDContainer sharedContainer] mapLevel];
                 
-                    [_coinsManager buy:[selectTower valueCost]];
+                    [_coinsManager buy:[selectTower valueCost] energy:needPower];
                     [_cellConstraction.tower buildTower];
                 
                     [_towerManager addTower:_cellConstraction.tower];
                 }
             } else {
-                [_statusBar animationNoMoney];
+                if([_coinsManager isLackOfEnergy:needPower] && [_coinsManager isLackOfMoney:[selectTower valueCost]]){
+                    [_statusBar animationNoMoney];
+                    [_statusBar animationNoEnegry];
+                } else if([_coinsManager isLackOfEnergy:[selectTower valuePower]]){
+                    [_statusBar animationNoEnegry];
+                } else if([_coinsManager isLackOfMoney:[selectTower valueCost]]){
+                    [_statusBar animationNoMoney];
+                }
             }
         });
     }
@@ -346,6 +362,10 @@ const NSInteger kStartCountLife = 20;
 
 - (void)updateCoins:(NSInteger)newCoins{
     [_statusBar.coins setString:[NSString stringWithFormat:@"%d", (int)newCoins]];
+}
+
+- (void)updatePowerEnergy:(NSInteger)energy{
+    [_statusBar.energy setString:[NSString stringWithFormat:@"%d", (int)energy]];
 }
 
 #pragma mark - TDScoreProtocol

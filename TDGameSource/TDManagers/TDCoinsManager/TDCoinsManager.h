@@ -11,16 +11,20 @@
 
 @interface TDCoinsManager : NSObject{
     NSInteger coins_;
+    NSInteger energy_;
 }
 
 @property (nonatomic) id<TDCoinsProtocol> delegate;
 
-- (id)initWithCoins:(NSInteger)coins;
+- (id)initWithCoins:(NSInteger)coins energy:(NSInteger)energy;
 
-- (void)buy:(NSInteger)cost;
+- (void)buy:(NSInteger)cost energy:(NSInteger)energy;
 - (void)profit:(NSInteger)profit;
 - (void)update;
 
-- (BOOL)canMakePurchaseBuild:(NSInteger)cost;
+- (BOOL)isLackOfEnergy:(NSInteger)enegry;
+- (BOOL)isLackOfMoney:(NSInteger)cost;
+
+- (BOOL)canMakePurchaseBuild:(NSInteger)cost electricPower:(NSInteger)enegry;
 
 @end

@@ -14,6 +14,12 @@
 		4921CA6B1D2AA60400FF723F /* TDProfitInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4921CA6A1D2AA60400FF723F /* TDProfitInfo.m */; };
 		493591EB1D2D32C60035F148 /* info.json in Resources */ = {isa = PBXBuildFile; fileRef = 493591EA1D2D32C60035F148 /* info.json */; };
 		493591F41D2D38430035F148 /* TDTowerJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 493591F31D2D38430035F148 /* TDTowerJSON.m */; };
+		49E64B451D3E4B970062E718 /* td_tower_energy_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 49E64B401D3E4B970062E718 /* td_tower_energy_0.png */; };
+		49E64B461D3E4B970062E718 /* td_tower_energy_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 49E64B411D3E4B970062E718 /* td_tower_energy_1.png */; };
+		49E64B471D3E4B970062E718 /* td_tower_energy_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 49E64B421D3E4B970062E718 /* td_tower_energy_2.png */; };
+		49E64B481D3E4B970062E718 /* td_tower_energy_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 49E64B431D3E4B970062E718 /* td_tower_energy_3.png */; };
+		49E64B491D3E4B970062E718 /* td_tower_energy_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 49E64B441D3E4B970062E718 /* td_tower_energy_4.png */; };
+		49E64B4B1D3E4BD90062E718 /* td_tower_tesla_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 49E64B4A1D3E4BD90062E718 /* td_tower_tesla_5.png */; };
 		5B12102A197484DD004C1E1D /* TestActivity.java in Sources */ = {isa = PBXBuildFile; fileRef = 5B12101B19748413004C1E1D /* TestActivity.java */; };
 		5B121030197484FA004C1E1D /* TestActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B12102F197484FA004C1E1D /* TestActivity.m */; };
 		5B121038197487F2004C1E1D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B737893E1807617C0076A88C /* AppDelegate.m */; };
@@ -231,6 +237,12 @@
 		493591EA1D2D32C60035F148 /* info.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = info.json; sourceTree = "<group>"; };
 		493591F21D2D38430035F148 /* TDTowerJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDTowerJSON.h; path = TDTowerJSON/TDTowerJSON.h; sourceTree = "<group>"; };
 		493591F31D2D38430035F148 /* TDTowerJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TDTowerJSON.m; path = TDTowerJSON/TDTowerJSON.m; sourceTree = "<group>"; };
+		49E64B401D3E4B970062E718 /* td_tower_energy_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = td_tower_energy_0.png; sourceTree = "<group>"; };
+		49E64B411D3E4B970062E718 /* td_tower_energy_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = td_tower_energy_1.png; sourceTree = "<group>"; };
+		49E64B421D3E4B970062E718 /* td_tower_energy_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = td_tower_energy_2.png; sourceTree = "<group>"; };
+		49E64B431D3E4B970062E718 /* td_tower_energy_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = td_tower_energy_3.png; sourceTree = "<group>"; };
+		49E64B441D3E4B970062E718 /* td_tower_energy_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = td_tower_energy_4.png; sourceTree = "<group>"; };
+		49E64B4A1D3E4BD90062E718 /* td_tower_tesla_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = td_tower_tesla_5.png; sourceTree = "<group>"; };
 		5B12100919748273004C1E1D /* libEGL.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEGL.so; path = /usr/lib/armv7a/libEGL.so; sourceTree = SDKROOT; };
 		5B12100B19748281004C1E1D /* BridgeKitV3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BridgeKitV3.framework; path = System/Library/Frameworks/BridgeKitV3.framework; sourceTree = SDKROOT; };
 		5B12100F197483EE004C1E1D /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
@@ -1182,6 +1194,12 @@
 		84E2AB421D2870B900B9C504 /* TDTowerSkins */ = {
 			isa = PBXGroup;
 			children = (
+				49E64B4A1D3E4BD90062E718 /* td_tower_tesla_5.png */,
+				49E64B401D3E4B970062E718 /* td_tower_energy_0.png */,
+				49E64B411D3E4B970062E718 /* td_tower_energy_1.png */,
+				49E64B421D3E4B970062E718 /* td_tower_energy_2.png */,
+				49E64B431D3E4B970062E718 /* td_tower_energy_3.png */,
+				49E64B441D3E4B970062E718 /* td_tower_energy_4.png */,
 				84E2AB431D2870B900B9C504 /* td_tower_archers.png */,
 				84E2AB441D2870B900B9C504 /* td_tower_base.png */,
 				84E2AB451D2870B900B9C504 /* td_tower_cannon.png */,
@@ -1588,6 +1606,7 @@
 				84E2AB9E1D2870B900B9C504 /* td_build_menu_light_blue_item.png in Resources */,
 				84E2ABA31D2870B900B9C504 /* td_map_cells_spritesheet.png in Resources */,
 				84E2ABA11D2870B900B9C504 /* td_level_1_map.tmx in Resources */,
+				49E64B4B1D3E4BD90062E718 /* td_tower_tesla_5.png in Resources */,
 				B71F5919188484E7003F4D28 /* Settings.png in Resources */,
 				84E2AB891D2870B900B9C504 /* td_field_element_spritesheet.png in Resources */,
 				4921CA5D1D2A762300FF723F /* priceBoard.png in Resources */,
@@ -1598,6 +1617,7 @@
 				84E2AB9F1D2870B900B9C504 /* td_build_menu_white_item.png in Resources */,
 				84E2ABA21D2870B900B9C504 /* td_level_2_map.tmx in Resources */,
 				84E2AB961D2870B900B9C504 /* td_slayer_move_right.plist in Resources */,
+				49E64B481D3E4B970062E718 /* td_tower_energy_3.png in Resources */,
 				B71F5914188484E7003F4D28 /* iPad@2x.png in Resources */,
 				84E2ABA41D2870B900B9C504 /* td_tower_archers.png in Resources */,
 				84E2AB8F1D2870B900B9C504 /* td_minotaur_move_right.png in Resources */,
@@ -1606,6 +1626,7 @@
 				B71F5913188484E7003F4D28 /* iPad.png in Resources */,
 				84E2AB991D2870B900B9C504 /* td_slayer_move_up.png in Resources */,
 				B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */,
+				49E64B471D3E4B970062E718 /* td_tower_energy_2.png in Resources */,
 				B71F5916188484E7003F4D28 /* iPhone-old@2x.png in Resources */,
 				84E2ABA71D2870B900B9C504 /* td_tower_in_progress.png in Resources */,
 				84E2AB841D2870B900B9C504 /* td_defend_point_broken.plist in Resources */,
@@ -1626,8 +1647,10 @@
 				84E2AB831D2870B900B9C504 /* explosion.png in Resources */,
 				84E2AB871D2870B900B9C504 /* td_defend_point_normal.png in Resources */,
 				84E2AB921D2870B900B9C504 /* td_slayer_move_down.plist in Resources */,
+				49E64B491D3E4B970062E718 /* td_tower_energy_4.png in Resources */,
 				B71F5915188484E7003F4D28 /* iPhone-old.png in Resources */,
 				84E2AB811D2870B900B9C504 /* td_path_element.png in Resources */,
+				49E64B451D3E4B970062E718 /* td_tower_energy_0.png in Resources */,
 				84E2AB881D2870B900B9C504 /* td_field_element_spritesheet.plist in Resources */,
 				B71F5917188484E7003F4D28 /* iPhone.png in Resources */,
 				84E2AB911D2870B900B9C504 /* td_minotaur_move_up.png in Resources */,
@@ -1637,6 +1660,7 @@
 				84E2AB9A1D2870B900B9C504 /* td_build_menu_1.png in Resources */,
 				B7378975180762440076A88C /* Default-568h@2x.png in Resources */,
 				84E2AB9D1D2870B900B9C504 /* td_build_menu_green_item.png in Resources */,
+				49E64B461D3E4B970062E718 /* td_tower_energy_1.png in Resources */,
 				84E2AB971D2870B900B9C504 /* td_slayer_move_right.png in Resources */,
 				84E2AB861D2870B900B9C504 /* td_defend_point_normal.plist in Resources */,
 				B71F5918188484E7003F4D28 /* iPhone@2x.png in Resources */,

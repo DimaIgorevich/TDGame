@@ -15,6 +15,10 @@
         return kArcherTower;
     } else if([value isEqualToString:@"kCannonTower"]){
         return kCannonTower;
+    } else if ([value isEqualToString:@"kEnergyTower"]){
+        return kEnergyTower;
+    } else if([value isEqualToString:@"kTeslaTower"]){
+        return kTeslaTower;
     }
     
     return kClosedTower;

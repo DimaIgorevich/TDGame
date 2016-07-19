@@ -215,11 +215,14 @@ const NSInteger kStartCountLife = 20;
             CGPoint buildPoint = CGPointMake(_cellConstraction.x, _cellConstraction.y);
             TDTower *selectTower = [[TDTower alloc] initWithJSONObject:typeTower.tower inPoint:buildPoint];
             NSInteger needPower;
+            
             if(_cellConstraction.tower){
-                needPower = [_cellConstraction.tower valuePower] - [selectTower valuePower];
+                needPower = [selectTower valuePower] - [_cellConstraction.tower valuePower];
             } else {
                 needPower = [selectTower valuePower];
             }
+            
+            NSLog(@"need power: %d", needPower);
             
             if([_coinsManager canMakePurchaseBuild:[selectTower valueCost] electricPower:needPower]){
                 if(_cellConstraction.tower){

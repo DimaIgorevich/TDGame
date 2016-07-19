@@ -19,7 +19,7 @@
 }
 
 - (void)buy:(NSInteger)cost energy:(NSInteger)energy{
-    energy_ -= energy;
+    energy_ += energy;
     coins_ -= cost;
 }
 

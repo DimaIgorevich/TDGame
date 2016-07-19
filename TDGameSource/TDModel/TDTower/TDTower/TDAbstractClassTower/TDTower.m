@@ -84,14 +84,23 @@
 }
 
 - (void)upgradeTower:(TDTowerJSON *)tower{
+    
+    [towerSprite_ removeFromParent];
+    towerSprite_ = [CCSprite spriteWithImageNamed:tower.fileNameTowerSprite];
+    [self updateSkin];
+    
+    [delegate_ addChild:towerSprite_ z:1];
+    
     typeTower_ = tower.typeTower;
     damage_ = tower.damage;
+    power_ = tower.power;
     cost_ = tower.cost;
     speedBullet_ = tower.speedBullet;
     coolDown_ = tower.coolDown;
     
     radius_ = tower.radius;
     [self setSizeRadius];
+    [self setRadiusOnCenter];
     
     upgradeLevel_++;
 }
@@ -101,16 +110,7 @@
     radiusSprite_.scaleY = (radiusSprite_.contentSize.height + radius_)/radiusSprite_.contentSize.height;
 }
 
-- (void)towerIsReady{
-    radiusSprite_ = [CCSprite spriteWithImageNamed:@"td_path_element.png"];
-    
-    [delegate_ addChild:radiusSprite_ z:1];
-    
-    [radiusSprite_ sizeToCustomFit:[[TDContainer sharedContainer] mapLevel].tileSize];
-    [towerSprite_ sizeToCustomFit:[[TDContainer sharedContainer] mapLevel].tileSize];
-    
-    [self setSizeRadius];
-    
+- (void)setRadiusOnCenter{
     CGPoint center = position_;
     
     CGRect tower = [towerSprite_ worldBoundingBox];
@@ -124,13 +124,29 @@
     
     radiusSprite_.position = center;
     radiusSprite_.anchorPoint = CGPointZero;
+}
+
+- (void)updateSkin{
+    [towerSprite_ sizeToCustomFit:[[TDContainer sharedContainer] mapLevel].tileSize];
+    towerSprite_.anchorPoint = CGPointZero;
+    towerSprite_.position = position_;
+}
+
+- (void)towerIsReady{
+    radiusSprite_ = [CCSprite spriteWithImageNamed:@"td_path_element.png"];
+    
+    [delegate_ addChild:radiusSprite_ z:1];
+    
+    [radiusSprite_ sizeToCustomFit:[[TDContainer sharedContainer] mapLevel].tileSize];
+    
+    [self updateSkin];
+    
+    [self setSizeRadius];
+    
+    [self setRadiusOnCenter];
     
     [radiusSprite_ setOpacity:0.0f];
     //[radiusSprite_ setOpacity: 0.85f];
-
-    
-    towerSprite_.anchorPoint = CGPointZero;
-    towerSprite_.position = position_;
     
     [delegate_ addChild:towerSprite_ z:1];
 }

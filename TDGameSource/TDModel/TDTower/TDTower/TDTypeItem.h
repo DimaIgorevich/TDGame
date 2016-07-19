@@ -11,6 +11,8 @@
 typedef enum{
     kArcherTower,
     kCannonTower,
+    kEnergyTower,
+    kTeslaTower,
     kClosedTower
 }TypeItem;
 

@@ -27,7 +27,7 @@
 
 - (BOOL)isShowBuildMenu;
 - (CGPoint)menuPosition;
-- (TDTowerJSON *)dataByTower:(TDTower *)objectTower;
+- (NSArray *)dataByTower:(TDTower *)objectTower;
 
 @end
 

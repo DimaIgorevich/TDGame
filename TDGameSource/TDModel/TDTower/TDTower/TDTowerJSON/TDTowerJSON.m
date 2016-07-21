@@ -11,7 +11,7 @@
 @implementation TDTowerJSON
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary{
-    if(self = [super initWithDictionary:dictionary]){      
+    if(self = [super initWithDictionary:dictionary]){
         _fileNameTowerSprite = [dictionary objectForKey:@"towerSprite"];
         _upgradeLevel = [[dictionary objectForKey:@"upgradeLevel"] integerValue];
         _typeTower = [TDTypeItem stringValueToType:[dictionary objectForKey:@"typeTower"]];

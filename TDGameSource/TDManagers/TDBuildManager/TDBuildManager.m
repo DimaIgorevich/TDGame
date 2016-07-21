@@ -27,6 +27,8 @@
         jsonTowers_ = [TDObject arrayOfObjectsOfClass:[TDTowerJSON class] fromJSON:[json objectForKey:kBuildingObjects]];
         upgradeBranches_ = [self upgradeBranchesFromJSONFile];
         
+        NSLog(@"upgradeBranches: %@", upgradeBranches_);
+        
     }
     return self;
 }
@@ -45,10 +47,9 @@
 
 - (NSDictionary *)createUpgradeBranch:(NSDictionary *)dictionary{
     NSMutableDictionary *branch = [[NSMutableDictionary alloc] init];
-    NSArray <TDTowerJSON *>* jsonTowers = [TDObject arrayOfObjectsOfClass:[TDTowerJSON class] fromJSON:dictionary];
-    for(TDTowerJSON *tower in jsonTowers){
-        NSString *key = [NSString stringWithFormat:@"%d", (int)tower.upgradeLevel];
-        [branch setObject:tower forKey:key];
+    for(NSString *keyLevel in dictionary){
+        NSArray <TDTowerJSON *>* jsonTowers = [TDObject arrayOfObjectsOfClass:[TDTowerJSON class] fromJSON:[dictionary objectForKey:keyLevel]];
+        [branch setObject:jsonTowers forKey:keyLevel];
     }
     return branch;
 }
@@ -65,7 +66,8 @@
 }
 
 - (void)showBuildMenuForTower:(TDTower *)tower inShowPoint:(CGPoint)showPoint{
-    NSArray *towers = [NSArray arrayWithObjects:[self dataByTower:tower], nil];
+    //NSArray *towers = [NSArray arrayWithObjects:[self dataByTower:tower], nil];
+    NSArray *towers = [NSArray arrayWithArray:[self dataByTower:tower]];
     [self initBuildMenuWithTowers:towers];
     showPoint_ = showPoint;
     
@@ -97,7 +99,7 @@
     return showPoint_;
 }
 
-- (TDTowerJSON *)dataByTower:(TDTower *)objectTower{
+- (NSArray *)dataByTower:(TDTower *)objectTower{
     NSString *keyBranch = [NSString stringWithFormat:@"%d", [objectTower typeTower]];
     NSDictionary *updateBranch = [upgradeBranches_ objectForKey:keyBranch];
     NSString *keyBranchUpgrade = [NSString stringWithFormat:@"%d", (int)[objectTower upgradeLevel]];

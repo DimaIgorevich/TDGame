@@ -12,7 +12,7 @@
 #import "TDRewardProtocol.h"
 
 const NSInteger kStartLevelWave = 0;
-const NSInteger kCountLevelWave = 2;
+const NSInteger kCountLevelWave = 4;
 
 const NSInteger kStartCountEnemy = 10;
 
@@ -133,7 +133,7 @@ const CGFloat kTimeIncrementIntervalBeetwenWave = 6.0f;
     for(int i = 0;i < countEnemyCurrentWave_; i++){
         [enemies_ addObject:[self addEnemyForWaveLevel:numberLvl_]];
     }
-    
+   
     [self addManager];
 }
 
@@ -141,7 +141,6 @@ const CGFloat kTimeIncrementIntervalBeetwenWave = 6.0f;
     for(TDEnemy *objectEnemy in enemies_){
         objectEnemy.manager = self;
     }
-
 }
 
 - (void)toRespawnPointCurrentEnemy{
@@ -158,6 +157,8 @@ const CGFloat kTimeIncrementIntervalBeetwenWave = 6.0f;
     
     return [@{@(kSlayerLvl) : [[TDSlayer alloc] initWithRespawnPoint:respawnPoint delegate:mapDelegate_],
               @(kMinotaurLvl) : [[TDMinotaur alloc] initWithRespawnPoint:respawnPoint delegate:mapDelegate_],
+              @(kMumiesLvl) : [[TDMumies alloc] initWithRespawnPoint: respawnPoint delegate:mapDelegate_],
+              @(kNigthmareLvl) : [[TDNightmare alloc] initWithRespawnPoint:respawnPoint delegate:mapDelegate_]
               } objectForKey:@(levelType)];
 }
 
@@ -228,6 +229,9 @@ const CGFloat kTimeIncrementIntervalBeetwenWave = 6.0f;
 
 - (void)incrementIntervalWave{
     waveInterval_ += kTimeIncrementIntervalBeetwenWave;
+    if(waveInterval_ > 10.0f){
+        waveInterval_ = 10.0f;
+    }
 }
 
 #pragma mark - TDRewardProtocol

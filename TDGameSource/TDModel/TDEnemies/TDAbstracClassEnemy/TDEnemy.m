@@ -214,8 +214,7 @@ const float kDefaultCoordinate = -100.0f;
 }
 
 
-- (CGPoint)findNextPoint{
-    
+- (CGPoint)findNextPoint{    
     if((int)[[TDContainer sharedContainer] pathObjects].count - 1 > _currentPathObject){
         _currentPathObject++;
     } else {

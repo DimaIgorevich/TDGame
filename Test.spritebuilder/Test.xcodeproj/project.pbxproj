@@ -7,6 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4904D1CF1D4B95A6008B3544 /* TDMumies.m in Sources */ = {isa = PBXBuildFile; fileRef = 4904D1CE1D4B95A6008B3544 /* TDMumies.m */; };
+		4904D1D31D4B9768008B3544 /* TDNightmare.m in Sources */ = {isa = PBXBuildFile; fileRef = 4904D1D21D4B9768008B3544 /* TDNightmare.m */; };
+		4904D1DD1D4BA065008B3544 /* td_mumies_move_down.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4904D1D51D4BA065008B3544 /* td_mumies_move_down.plist */; };
+		4904D1DE1D4BA065008B3544 /* td_mumies_move_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 4904D1D61D4BA065008B3544 /* td_mumies_move_down.png */; };
+		4904D1DF1D4BA065008B3544 /* td_mumies_move_left.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4904D1D71D4BA065008B3544 /* td_mumies_move_left.plist */; };
+		4904D1E01D4BA065008B3544 /* td_mumies_move_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 4904D1D81D4BA065008B3544 /* td_mumies_move_left.png */; };
+		4904D1E11D4BA065008B3544 /* td_mumies_move_right.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4904D1D91D4BA065008B3544 /* td_mumies_move_right.plist */; };
+		4904D1E21D4BA065008B3544 /* td_mumies_move_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 4904D1DA1D4BA065008B3544 /* td_mumies_move_right.png */; };
+		4904D1E31D4BA065008B3544 /* td_mumies_move_up.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4904D1DB1D4BA065008B3544 /* td_mumies_move_up.plist */; };
+		4904D1E41D4BA065008B3544 /* td_mumies_move_up.png in Resources */ = {isa = PBXBuildFile; fileRef = 4904D1DC1D4BA065008B3544 /* td_mumies_move_up.png */; };
+		4904D1EE1D4BA0EA008B3544 /* td_nightmare_move_down.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4904D1E61D4BA0EA008B3544 /* td_nightmare_move_down.plist */; };
+		4904D1EF1D4BA0EA008B3544 /* td_nightmare_move_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 4904D1E71D4BA0EA008B3544 /* td_nightmare_move_down.png */; };
+		4904D1F01D4BA0EA008B3544 /* td_nightmare_move_left.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4904D1E81D4BA0EA008B3544 /* td_nightmare_move_left.plist */; };
+		4904D1F11D4BA0EA008B3544 /* td_nightmare_move_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 4904D1E91D4BA0EA008B3544 /* td_nightmare_move_left.png */; };
+		4904D1F21D4BA0EA008B3544 /* td_nightmare_move_right.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4904D1EA1D4BA0EA008B3544 /* td_nightmare_move_right.plist */; };
+		4904D1F31D4BA0EA008B3544 /* td_nightmare_move_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 4904D1EB1D4BA0EA008B3544 /* td_nightmare_move_right.png */; };
+		4904D1F41D4BA0EA008B3544 /* td_nightmare_move_up.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4904D1EC1D4BA0EA008B3544 /* td_nightmare_move_up.plist */; };
+		4904D1F51D4BA0EA008B3544 /* td_nightmare_move_up.png in Resources */ = {isa = PBXBuildFile; fileRef = 4904D1ED1D4BA0EA008B3544 /* td_nightmare_move_up.png */; };
 		4912E8BF1D2FAEF000A1418B /* TDJSONObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = 4912E8BE1D2FAEF000A1418B /* TDJSONObjects.m */; };
 		4912E8C31D2FB9FB00A1418B /* TDTypeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4912E8C21D2FB9FB00A1418B /* TDTypeItem.m */; };
 		4921CA5D1D2A762300FF723F /* priceBoard.png in Resources */ = {isa = PBXBuildFile; fileRef = 4921CA5C1D2A762300FF723F /* priceBoard.png */; };
@@ -224,6 +242,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4904D1CD1D4B95A6008B3544 /* TDMumies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDMumies.h; path = TDMumies/TDMumies.h; sourceTree = "<group>"; };
+		4904D1CE1D4B95A6008B3544 /* TDMumies.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TDMumies.m; path = TDMumies/TDMumies.m; sourceTree = "<group>"; };
+		4904D1D11D4B9768008B3544 /* TDNightmare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDNightmare.h; path = TDNightmare/TDNightmare.h; sourceTree = "<group>"; };
+		4904D1D21D4B9768008B3544 /* TDNightmare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TDNightmare.m; path = TDNightmare/TDNightmare.m; sourceTree = "<group>"; };
+		4904D1D51D4BA065008B3544 /* td_mumies_move_down.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = td_mumies_move_down.plist; sourceTree = "<group>"; };
+		4904D1D61D4BA065008B3544 /* td_mumies_move_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = td_mumies_move_down.png; sourceTree = "<group>"; };
+		4904D1D71D4BA065008B3544 /* td_mumies_move_left.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = td_mumies_move_left.plist; sourceTree = "<group>"; };
+		4904D1D81D4BA065008B3544 /* td_mumies_move_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = td_mumies_move_left.png; sourceTree = "<group>"; };
+		4904D1D91D4BA065008B3544 /* td_mumies_move_right.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = td_mumies_move_right.plist; sourceTree = "<group>"; };
+		4904D1DA1D4BA065008B3544 /* td_mumies_move_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = td_mumies_move_right.png; sourceTree = "<group>"; };
+		4904D1DB1D4BA065008B3544 /* td_mumies_move_up.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = td_mumies_move_up.plist; sourceTree = "<group>"; };
+		4904D1DC1D4BA065008B3544 /* td_mumies_move_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = td_mumies_move_up.png; sourceTree = "<group>"; };
+		4904D1E61D4BA0EA008B3544 /* td_nightmare_move_down.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = td_nightmare_move_down.plist; sourceTree = "<group>"; };
+		4904D1E71D4BA0EA008B3544 /* td_nightmare_move_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = td_nightmare_move_down.png; sourceTree = "<group>"; };
+		4904D1E81D4BA0EA008B3544 /* td_nightmare_move_left.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = td_nightmare_move_left.plist; sourceTree = "<group>"; };
+		4904D1E91D4BA0EA008B3544 /* td_nightmare_move_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = td_nightmare_move_left.png; sourceTree = "<group>"; };
+		4904D1EA1D4BA0EA008B3544 /* td_nightmare_move_right.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = td_nightmare_move_right.plist; sourceTree = "<group>"; };
+		4904D1EB1D4BA0EA008B3544 /* td_nightmare_move_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = td_nightmare_move_right.png; sourceTree = "<group>"; };
+		4904D1EC1D4BA0EA008B3544 /* td_nightmare_move_up.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = td_nightmare_move_up.plist; sourceTree = "<group>"; };
+		4904D1ED1D4BA0EA008B3544 /* td_nightmare_move_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = td_nightmare_move_up.png; sourceTree = "<group>"; };
 		4912E8BD1D2FAEF000A1418B /* TDJSONObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDJSONObjects.h; sourceTree = "<group>"; };
 		4912E8BE1D2FAEF000A1418B /* TDJSONObjects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDJSONObjects.m; sourceTree = "<group>"; };
 		4912E8C11D2FB9FB00A1418B /* TDTypeItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDTypeItem.h; sourceTree = "<group>"; };
@@ -500,6 +538,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4904D1C71D4B9557008B3544 /* TDMumies */ = {
+			isa = PBXGroup;
+			children = (
+				4904D1CD1D4B95A6008B3544 /* TDMumies.h */,
+				4904D1CE1D4B95A6008B3544 /* TDMumies.m */,
+			);
+			name = TDMumies;
+			sourceTree = "<group>";
+		};
+		4904D1D01D4B9670008B3544 /* TDNightmare */ = {
+			isa = PBXGroup;
+			children = (
+				4904D1D11D4B9768008B3544 /* TDNightmare.h */,
+				4904D1D21D4B9768008B3544 /* TDNightmare.m */,
+			);
+			name = TDNightmare;
+			sourceTree = "<group>";
+		};
+		4904D1D41D4BA065008B3544 /* TDMummiesAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				4904D1D51D4BA065008B3544 /* td_mumies_move_down.plist */,
+				4904D1D61D4BA065008B3544 /* td_mumies_move_down.png */,
+				4904D1D71D4BA065008B3544 /* td_mumies_move_left.plist */,
+				4904D1D81D4BA065008B3544 /* td_mumies_move_left.png */,
+				4904D1D91D4BA065008B3544 /* td_mumies_move_right.plist */,
+				4904D1DA1D4BA065008B3544 /* td_mumies_move_right.png */,
+				4904D1DB1D4BA065008B3544 /* td_mumies_move_up.plist */,
+				4904D1DC1D4BA065008B3544 /* td_mumies_move_up.png */,
+			);
+			path = TDMummiesAnimation;
+			sourceTree = "<group>";
+		};
+		4904D1E51D4BA0EA008B3544 /* TDNightmareAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				4904D1E61D4BA0EA008B3544 /* td_nightmare_move_down.plist */,
+				4904D1E71D4BA0EA008B3544 /* td_nightmare_move_down.png */,
+				4904D1E81D4BA0EA008B3544 /* td_nightmare_move_left.plist */,
+				4904D1E91D4BA0EA008B3544 /* td_nightmare_move_left.png */,
+				4904D1EA1D4BA0EA008B3544 /* td_nightmare_move_right.plist */,
+				4904D1EB1D4BA0EA008B3544 /* td_nightmare_move_right.png */,
+				4904D1EC1D4BA0EA008B3544 /* td_nightmare_move_up.plist */,
+				4904D1ED1D4BA0EA008B3544 /* td_nightmare_move_up.png */,
+			);
+			path = TDNightmareAnimation;
+			sourceTree = "<group>";
+		};
 		4912E8BB1D2FAEBD00A1418B /* TDUtils */ = {
 			isa = PBXGroup;
 			children = (
@@ -901,8 +987,10 @@
 				4921CA681D2AA5E800FF723F /* TDProfitAnimation */,
 				84E2AADB1D2870B800B9C504 /* TDAbstracClassEnemy */,
 				84E2AADE1D2870B800B9C504 /* TDLifeIndicator */,
-				84E2AAE11D2870B800B9C504 /* TDMinotaur */,
 				84E2AAE41D2870B800B9C504 /* TDSlayer */,
+				84E2AAE11D2870B800B9C504 /* TDMinotaur */,
+				4904D1C71D4B9557008B3544 /* TDMumies */,
+				4904D1D01D4B9670008B3544 /* TDNightmare */,
 			);
 			path = TDEnemies;
 			sourceTree = "<group>";
@@ -1124,6 +1212,8 @@
 		84E2AB221D2870B800B9C504 /* TDEnemiesAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				4904D1E51D4BA0EA008B3544 /* TDNightmareAnimation */,
+				4904D1D41D4BA065008B3544 /* TDMummiesAnimation */,
 				84E2AB231D2870B800B9C504 /* TDMinotaurAnimation */,
 				84E2AB2C1D2870B900B9C504 /* TDSlayerAnimation */,
 			);
@@ -1608,16 +1698,22 @@
 				84E2ABA11D2870B900B9C504 /* td_level_1_map.tmx in Resources */,
 				49E64B4B1D3E4BD90062E718 /* td_tower_tesla_5.png in Resources */,
 				B71F5919188484E7003F4D28 /* Settings.png in Resources */,
+				4904D1F21D4BA0EA008B3544 /* td_nightmare_move_right.plist in Resources */,
 				84E2AB891D2870B900B9C504 /* td_field_element_spritesheet.png in Resources */,
+				4904D1DD1D4BA065008B3544 /* td_mumies_move_down.plist in Resources */,
 				4921CA5D1D2A762300FF723F /* priceBoard.png in Resources */,
 				B7378978180762440076A88C /* Default@2x.png in Resources */,
+				4904D1F51D4BA0EA008B3544 /* td_nightmare_move_up.png in Resources */,
 				84E2AB821D2870B900B9C504 /* explosion.plist in Resources */,
 				84E2AB7E1D2870B900B9C504 /* td_block_element.png in Resources */,
 				84E2AB931D2870B900B9C504 /* td_slayer_move_down.png in Resources */,
 				84E2AB9F1D2870B900B9C504 /* td_build_menu_white_item.png in Resources */,
 				84E2ABA21D2870B900B9C504 /* td_level_2_map.tmx in Resources */,
 				84E2AB961D2870B900B9C504 /* td_slayer_move_right.plist in Resources */,
+				4904D1F01D4BA0EA008B3544 /* td_nightmare_move_left.plist in Resources */,
+				4904D1E11D4BA065008B3544 /* td_mumies_move_right.plist in Resources */,
 				49E64B481D3E4B970062E718 /* td_tower_energy_3.png in Resources */,
+				4904D1F41D4BA0EA008B3544 /* td_nightmare_move_up.plist in Resources */,
 				B71F5914188484E7003F4D28 /* iPad@2x.png in Resources */,
 				84E2ABA41D2870B900B9C504 /* td_tower_archers.png in Resources */,
 				84E2AB8F1D2870B900B9C504 /* td_minotaur_move_right.png in Resources */,
@@ -1625,6 +1721,7 @@
 				84E2AB8D1D2870B900B9C504 /* td_minotaur_move_left.png in Resources */,
 				B71F5913188484E7003F4D28 /* iPad.png in Resources */,
 				84E2AB991D2870B900B9C504 /* td_slayer_move_up.png in Resources */,
+				4904D1F31D4BA0EA008B3544 /* td_nightmare_move_right.png in Resources */,
 				B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */,
 				49E64B471D3E4B970062E718 /* td_tower_energy_2.png in Resources */,
 				B71F5916188484E7003F4D28 /* iPhone-old@2x.png in Resources */,
@@ -1634,14 +1731,19 @@
 				B737893B180761570076A88C /* Published-iOS in Resources */,
 				84E2AB8A1D2870B900B9C504 /* td_minotaur_move_down.plist in Resources */,
 				84E2ABA61D2870B900B9C504 /* td_tower_cannon.png in Resources */,
+				4904D1E01D4BA065008B3544 /* td_mumies_move_left.png in Resources */,
 				84E2AB8C1D2870B900B9C504 /* td_minotaur_move_left.plist in Resources */,
+				4904D1E21D4BA065008B3544 /* td_mumies_move_right.png in Resources */,
 				84E2AB8E1D2870B900B9C504 /* td_minotaur_move_right.plist in Resources */,
 				84E2ABA01D2870B900B9C504 /* td_build_menu_yellow_item.png in Resources */,
 				84E2ABA51D2870B900B9C504 /* td_tower_base.png in Resources */,
 				84E2AB9C1D2870B900B9C504 /* td_build_menu_closed_item.png in Resources */,
+				4904D1E41D4BA065008B3544 /* td_mumies_move_up.png in Resources */,
+				4904D1DF1D4BA065008B3544 /* td_mumies_move_left.plist in Resources */,
 				B71F591A188484E7003F4D28 /* Settings@2x.png in Resources */,
 				84E2AB941D2870B900B9C504 /* td_slayer_move_left.plist in Resources */,
 				493591EB1D2D32C60035F148 /* info.json in Resources */,
+				4904D1DE1D4BA065008B3544 /* td_mumies_move_down.png in Resources */,
 				B7378976180762440076A88C /* Default-Landscape~ipad.png in Resources */,
 				84E2AB8B1D2870B900B9C504 /* td_minotaur_move_down.png in Resources */,
 				84E2AB831D2870B900B9C504 /* explosion.png in Resources */,
@@ -1656,17 +1758,21 @@
 				84E2AB911D2870B900B9C504 /* td_minotaur_move_up.png in Resources */,
 				84E2AB851D2870B900B9C504 /* td_defend_point_broken.png in Resources */,
 				84E2AB7F1D2870B900B9C504 /* td_bullet.png in Resources */,
+				4904D1EE1D4BA0EA008B3544 /* td_nightmare_move_down.plist in Resources */,
 				84E2AB951D2870B900B9C504 /* td_slayer_move_left.png in Resources */,
 				84E2AB9A1D2870B900B9C504 /* td_build_menu_1.png in Resources */,
 				B7378975180762440076A88C /* Default-568h@2x.png in Resources */,
 				84E2AB9D1D2870B900B9C504 /* td_build_menu_green_item.png in Resources */,
 				49E64B461D3E4B970062E718 /* td_tower_energy_1.png in Resources */,
 				84E2AB971D2870B900B9C504 /* td_slayer_move_right.png in Resources */,
+				4904D1EF1D4BA0EA008B3544 /* td_nightmare_move_down.png in Resources */,
+				4904D1E31D4BA065008B3544 /* td_mumies_move_up.plist in Resources */,
 				84E2AB861D2870B900B9C504 /* td_defend_point_normal.plist in Resources */,
 				B71F5918188484E7003F4D28 /* iPhone@2x.png in Resources */,
 				B7378977180762440076A88C /* Default.png in Resources */,
 				B71F5911188484E7003F4D28 /* iPad-old.png in Resources */,
 				84E2AB9B1D2870B900B9C504 /* td_build_menu_base.png in Resources */,
+				4904D1F11D4BA0EA008B3544 /* td_nightmare_move_left.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1766,8 +1872,10 @@
 				84E2ABB01D2870B900B9C504 /* TDAnimationSheet.m in Sources */,
 				84E2ABAA1D2870B900B9C504 /* TDGameScene.m in Sources */,
 				84E2AB7D1D2870B900B9C504 /* TDTowerCannon.m in Sources */,
+				4904D1D31D4B9768008B3544 /* TDNightmare.m in Sources */,
 				84E2AB6A1D2870B900B9C504 /* TDTouchManager.m in Sources */,
 				84E2AB641D2870B900B9C504 /* TDContainer.m in Sources */,
+				4904D1CF1D4B95A6008B3544 /* TDMumies.m in Sources */,
 				84E2AB761D2870B900B9C504 /* TDBuildMenu.m in Sources */,
 				84E2AB7B1D2870B900B9C504 /* TDTower.m in Sources */,
 				84E2ABAD1D2870B900B9C504 /* TDPauseMenu.m in Sources */,

@@ -10,6 +10,8 @@
 #import "TDEnemy.h"
 #import "TDSlayer.h"
 #import "TDMinotaur.h"
+#import "TDMumies.h"
+#import "TDNightmare.h"
 
 #import "TDCoinsManager.h"
 #import "TDScoreManager.h"
@@ -19,7 +21,9 @@
 
 typedef enum {
     kSlayerLvl,
-    kMinotaurLvl
+    kMinotaurLvl,
+    kMumiesLvl,
+    kNigthmareLvl
 } LvlType;
 
 @interface TDEnemyWaveManager : NSObject {

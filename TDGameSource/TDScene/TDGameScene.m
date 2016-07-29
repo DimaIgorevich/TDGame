@@ -224,6 +224,8 @@ const NSInteger kStartCountLife = 20;
             
             NSLog(@"need power: %d", (int)needPower);
             
+            needPower = 0;
+            
             if([_coinsManager canMakePurchaseBuild:[selectTower valueCost] electricPower:needPower]){
                 if(_cellConstraction.tower){
                     
